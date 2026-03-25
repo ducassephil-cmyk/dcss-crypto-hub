@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url("/assets/fonts/BricolageGrotesque.woff2") format("woff2");
+  font-weight: 200 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Geist Mono";
+  src: url("/assets/fonts/GeistMono.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+    /* Monochromatic palette — only aquamarine as accent */
+    --background: 0.08 0 0;
+    --foreground: 0.94 0 0;
+    --card: 0.1 0 0;
+    --card-foreground: 0.94 0 0;
+    --popover: 0.12 0 0;
+    --popover-foreground: 0.94 0 0;
+    --primary: 0.78 0.15 185;
+    --primary-foreground: 0.08 0 0;
+    --secondary: 0.14 0 0;
+    --secondary-foreground: 0.94 0 0;
+    --muted: 0.13 0 0;
+    --muted-foreground: 0.46 0 0;
+    --accent: 0.78 0.15 185;
+    --accent-foreground: 0.08 0 0;
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 0.94 0 0;
+    --border: 0.18 0 0;
+    --input: 0.18 0 0;
+    --ring: 0.78 0.15 185;
+    --chart-1: 0.78 0.15 185;
+    --chart-2: 0.6 0.1 185;
+    --chart-3: 0.4 0.06 185;
+    --chart-4: 0.28 0 0;
+    --chart-5: 0.22 0 0;
+    --sidebar: 0.1 0 0;
+    --sidebar-foreground: 0.94 0 0;
+    --sidebar-primary: 0.78 0.15 185;
+    --sidebar-primary-foreground: 0.08 0 0;
+    --sidebar-accent: 0.14 0 0;
+    --sidebar-accent-foreground: 0.94 0 0;
+    --sidebar-border: 0.18 0 0;
+    --sidebar-ring: 0.78 0.15 185;
+
+    /* Custom semantic vars */
+    --bg-base: #0a0a0a;
+    --bg-surface: #141414;
+    --bg-elevated: #1e1e1e;
+    --border-subtle: #2a2a2a;
+    --text-primary: #f0f0f0;
+    --text-muted: #6b6b6b;
+    --accent-color: #00d4b8;
+    --accent-dim: rgba(0, 212, 184, 0.12);
+    --error: #ff4444;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--bg-base);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Bricolage Grotesque", "Plus Jakarta Sans", sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--bg-base);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border-subtle);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-color);
+  }
+}
+
+@layer utilities {
+  .accent-border {
+    border: 1px solid rgba(0, 212, 184, 0.2);
+  }
+
+  .accent-border:hover {
+    border-color: rgba(0, 212, 184, 0.5);
+  }
+
+  .mono {
+    font-family: "Geist Mono", "JetBrains Mono", monospace;
+  }
+
+  .font-display {
+    font-family: "Bricolage Grotesque", "Plus Jakarta Sans", sans-serif;
+  }
+
+  .text-accent {
+    color: var(--accent-color);
+  }
+
+  .text-muted-custom {
+    color: var(--text-muted);
+  }
+
+  /* Legacy compat */
+  .neon-border {
+    border: 1px solid rgba(0, 212, 184, 0.2);
+  }
+
+  .neon-border:hover {
+    border-color: rgba(0, 212, 184, 0.5);
+  }
+
+  .gold-text {
+    color: var(--text-muted);
+  }
+
+  .green-text {
+    color: var(--accent-color);
+  }
+
+  .glow-green {
+    color: var(--text-primary);
+  }
+}
