@@ -22,11 +22,19 @@ interface WalletConnectModalProps {
 const WALLET_ICONS: Record<string, string> = {
   "Internet Identity": "II",
   Oisy: "OI",
+  Keplr: "KP",
 };
 
 const WALLET_DESC: Record<string, string> = {
   "Internet Identity": "Login con Internet Computer — sin seed phrase",
   Oisy: "Wallet multi-chain nativa de ICP",
+  Keplr: "Wallet del ecosistema Cosmos — ATOM, OSMO y más",
+};
+
+const WALLET_NETWORK_BADGE: Record<string, string> = {
+  "Internet Identity": "ICP",
+  Oisy: "ICP",
+  Keplr: "Cosmos",
 };
 
 function OisyInstallInstructions() {
@@ -92,25 +100,78 @@ function OisyInstallInstructions() {
   return null;
 }
 
+function KeplrInstallInstructions() {
+  const browser = detectBrowser();
+  if (browser === "edge") {
+    return (
+      <div
+        className="text-[11px] p-3 rounded-lg mt-1"
+        style={{
+          background: "rgba(118,90,226,0.06)",
+          border: "1px solid rgba(118,90,226,0.25)",
+          color: "var(--text-muted)",
+        }}
+      >
+        <p className="font-semibold mb-1" style={{ color: "#765AE2" }}>
+          Keplr en Edge
+        </p>
+        <ol className="list-decimal ml-3 space-y-0.5">
+          <li>Se abrirá la tienda de Edge Add-ons</li>
+          <li>Haz clic en &ldquo;Obtener&rdquo; para instalar Keplr</li>
+          <li>Crea o importa tu wallet Cosmos en Keplr</li>
+          <li>Regresa aquí y conecta</li>
+        </ol>
+      </div>
+    );
+  }
+  return (
+    <div
+      className="text-[11px] p-3 rounded-lg mt-1"
+      style={{
+        background: "rgba(118,90,226,0.06)",
+        border: "1px solid rgba(118,90,226,0.25)",
+        color: "var(--text-muted)",
+      }}
+    >
+      Instala Keplr desde{" "}
+      <a
+        href="https://www.keplr.app/download"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ color: "#765AE2" }}
+      >
+        keplr.app/download
+      </a>{" "}
+      y vuelve a conectar.
+    </div>
+  );
+}
+
 export default function WalletConnectModal({
   open,
   onClose,
 }: WalletConnectModalProps) {
   const { connectWallet, connectedWallets } = useWallet();
   const [connecting, setConnecting] = useState<string | null>(null);
+  const [showKeplrInstall, setShowKeplrInstall] = useState(false);
 
   async function handleConnect(walletId: string) {
     setConnecting(walletId);
     const wallet = await connectWallet("ICP", walletId);
     setConnecting(null);
 
-    if ((wallet as { redirected?: boolean; installNote?: string }).redirected) {
-      const note = (wallet as { installNote?: string }).installNote;
-      toast.info(`Instalar ${walletId}`, {
-        description:
-          note ?? "Instala la extensión en tu navegador y vuelve a conectar",
-        duration: 8000,
-      });
+    const r = wallet as { redirected?: boolean; installNote?: string };
+
+    if (r.redirected) {
+      if (walletId === "Keplr") {
+        setShowKeplrInstall(true);
+      } else {
+        toast.info(`Instalar ${walletId}`, {
+          description:
+            r.installNote ?? "Instala la extensión y vuelve a conectar",
+          duration: 8000,
+        });
+      }
       return;
     }
 
@@ -122,7 +183,7 @@ export default function WalletConnectModal({
       return;
     }
 
-    toast.success(`Conectado: ${wallet.address.slice(0, 16)}...`);
+    toast.success(`Conectado: ${wallet.address.slice(0, 20)}...`);
     onClose();
   }
 
@@ -144,8 +205,7 @@ export default function WalletConnectModal({
             Conectar Wallet
           </DialogTitle>
           <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
-            Conecta tu wallet de Internet Computer para ver balances y hacer
-            transacciones.
+            Selecciona tu wallet para ver balances y operar en tu red.
           </p>
         </DialogHeader>
 
@@ -154,7 +214,10 @@ export default function WalletConnectModal({
             const isConnected = activeAddrs.has(adapter.id);
             const isConnecting = connecting === adapter.id;
             const isOisy = adapter.id === "Oisy";
-            const oisyNotInstalled = isOisy && !adapter.isAvailable();
+            const isKeplr = adapter.id === "Keplr";
+            const notInstalled = !adapter.isAvailable();
+            const oisyNotInstalled = isOisy && notInstalled;
+            const keplrNotInstalled = isKeplr && notInstalled;
 
             return (
               <div key={adapter.id}>
@@ -169,7 +232,9 @@ export default function WalletConnectModal({
                       : "var(--bg-elevated)",
                     border: isConnected
                       ? "1px solid rgba(0,212,184,0.4)"
-                      : "1px solid var(--border-subtle)",
+                      : isKeplr
+                        ? "1px solid rgba(118,90,226,0.25)"
+                        : "1px solid var(--border-subtle)",
                     opacity: connecting && !isConnecting ? 0.5 : 1,
                     cursor: connecting ? "not-allowed" : "pointer",
                   }}
@@ -179,9 +244,13 @@ export default function WalletConnectModal({
                   <div
                     className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold shrink-0 font-mono"
                     style={{
-                      background: "var(--bg-base)",
-                      border: "1px solid var(--border-subtle)",
-                      color: "var(--accent-color)",
+                      background: isKeplr
+                        ? "rgba(118,90,226,0.12)"
+                        : "var(--bg-base)",
+                      border: isKeplr
+                        ? "1px solid rgba(118,90,226,0.35)"
+                        : "1px solid var(--border-subtle)",
+                      color: isKeplr ? "#765AE2" : "var(--accent-color)",
                     }}
                   >
                     {WALLET_ICONS[adapter.id] ??
@@ -190,13 +259,29 @@ export default function WalletConnectModal({
 
                   {/* Labels */}
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center gap-2 flex-wrap">
                       <span
                         className="text-sm font-semibold"
                         style={{ color: "var(--text-primary)" }}
                       >
                         {adapter.label}
                       </span>
+
+                      {/* Network badge */}
+                      {WALLET_NETWORK_BADGE[adapter.id] && (
+                        <span
+                          className="text-[9px] px-1.5 py-0.5 rounded-full font-semibold tracking-wide"
+                          style={{
+                            background: isKeplr
+                              ? "rgba(118,90,226,0.12)"
+                              : "rgba(0,212,184,0.08)",
+                            color: isKeplr ? "#765AE2" : "var(--accent-color)",
+                          }}
+                        >
+                          {WALLET_NETWORK_BADGE[adapter.id]}
+                        </span>
+                      )}
+
                       {isConnected && (
                         <span
                           className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
@@ -208,6 +293,21 @@ export default function WalletConnectModal({
                           Conectado
                         </span>
                       )}
+
+                      {keplrNotInstalled && (
+                        <span
+                          className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
+                          style={{
+                            background: "rgba(255,180,0,0.12)",
+                            color: "#ffb400",
+                          }}
+                        >
+                          {browser === "edge"
+                            ? "Disponible en Edge"
+                            : "No instalado"}
+                        </span>
+                      )}
+
                       {oisyNotInstalled && (
                         <span
                           className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
@@ -230,9 +330,11 @@ export default function WalletConnectModal({
                       className="text-xs mt-0.5 truncate"
                       style={{ color: "var(--text-muted)" }}
                     >
-                      {oisyNotInstalled && browser === "edge"
-                        ? "Click para abrir Chrome Web Store (compatible con Edge)"
-                        : WALLET_DESC[adapter.id]}
+                      {keplrNotInstalled && browser === "edge"
+                        ? "Click para abrir Edge Add-ons e instalar Keplr"
+                        : oisyNotInstalled && browser === "edge"
+                          ? "Click para abrir Chrome Web Store (compatible con Edge)"
+                          : WALLET_DESC[adapter.id]}
                     </p>
                   </div>
 
@@ -241,13 +343,17 @@ export default function WalletConnectModal({
                     <Loader2
                       size={16}
                       className="animate-spin shrink-0"
-                      style={{ color: "var(--accent-color)" }}
+                      style={{
+                        color: isKeplr ? "#765AE2" : "var(--accent-color)",
+                      }}
                     />
                   )}
                 </button>
 
-                {/* Edge / Firefox / Safari install instructions */}
                 {isOisy && oisyNotInstalled && <OisyInstallInstructions />}
+                {isKeplr && (keplrNotInstalled || showKeplrInstall) && (
+                  <KeplrInstallInstructions />
+                )}
               </div>
             );
           })}
