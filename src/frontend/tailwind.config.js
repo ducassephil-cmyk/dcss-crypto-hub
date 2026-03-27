@@ -72,7 +72,7 @@ export default {
           ring: "oklch(var(--sidebar-ring))",
         },
         neon: {
-          DEFAULT: "#00D4B8",
+          DEFAULT: "#09c96c",
           dim: "rgba(0,212,184,0.15)",
         },
         gold: {

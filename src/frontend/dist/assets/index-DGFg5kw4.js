@@ -15172,7 +15172,7 @@ const createLucideIcon = (iconName, iconNode) => {
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$y = [
+const __iconNode$A = [
   [
     "path",
     {
@@ -15181,7 +15181,31 @@ const __iconNode$y = [
     }
   ]
 ];
-const Activity = createLucideIcon("activity", __iconNode$y);
+const Activity = createLucideIcon("activity", __iconNode$A);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$z = [
+  ["path", { d: "M17 7 7 17", key: "15tmo1" }],
+  ["path", { d: "M17 17H7V7", key: "1org7z" }]
+];
+const ArrowDownLeft = createLucideIcon("arrow-down-left", __iconNode$z);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$y = [
+  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
+  ["path", { d: "M4 7h16", key: "6tx8e3" }],
+  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
+  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+];
+const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$y);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15189,10 +15213,10 @@ const Activity = createLucideIcon("activity", __iconNode$y);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$x = [
-  ["path", { d: "M17 7 7 17", key: "15tmo1" }],
-  ["path", { d: "M17 17H7V7", key: "1org7z" }]
+  ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
+  ["path", { d: "M19 12H5", key: "x3x0zl" }]
 ];
-const ArrowDownLeft = createLucideIcon("arrow-down-left", __iconNode$x);
+const ArrowLeft = createLucideIcon("arrow-left", __iconNode$x);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15200,12 +15224,10 @@ const ArrowDownLeft = createLucideIcon("arrow-down-left", __iconNode$x);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$w = [
-  ["path", { d: "M8 3 4 7l4 4", key: "9rb6wj" }],
-  ["path", { d: "M4 7h16", key: "6tx8e3" }],
-  ["path", { d: "m16 21 4-4-4-4", key: "siv7j2" }],
-  ["path", { d: "M20 17H4", key: "h6l3hr" }]
+  ["path", { d: "M7 7h10v10", key: "1tivn9" }],
+  ["path", { d: "M7 17 17 7", key: "1vkiza" }]
 ];
-const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$w);
+const ArrowUpRight = createLucideIcon("arrow-up-right", __iconNode$w);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15213,28 +15235,6 @@ const ArrowLeftRight = createLucideIcon("arrow-left-right", __iconNode$w);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$v = [
-  ["path", { d: "m12 19-7-7 7-7", key: "1l729n" }],
-  ["path", { d: "M19 12H5", key: "x3x0zl" }]
-];
-const ArrowLeft = createLucideIcon("arrow-left", __iconNode$v);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$u = [
-  ["path", { d: "M7 7h10v10", key: "1tivn9" }],
-  ["path", { d: "M7 17 17 7", key: "1vkiza" }]
-];
-const ArrowUpRight = createLucideIcon("arrow-up-right", __iconNode$u);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$t = [
   ["path", { d: "M10.268 21a2 2 0 0 0 3.464 0", key: "vwvbt9" }],
   [
     "path",
@@ -15244,14 +15244,14 @@ const __iconNode$t = [
     }
   ]
 ];
-const Bell = createLucideIcon("bell", __iconNode$t);
+const Bell = createLucideIcon("bell", __iconNode$v);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$s = [
+const __iconNode$u = [
   ["path", { d: "M12 7v14", key: "1akyts" }],
   [
     "path",
@@ -15261,39 +15261,62 @@ const __iconNode$s = [
     }
   ]
 ];
-const BookOpen = createLucideIcon("book-open", __iconNode$s);
+const BookOpen = createLucideIcon("book-open", __iconNode$u);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$r = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
-const Check = createLucideIcon("check", __iconNode$r);
+const __iconNode$t = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
+const Check = createLucideIcon("check", __iconNode$t);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$q = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
-const ChevronDown = createLucideIcon("chevron-down", __iconNode$q);
+const __iconNode$s = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
+const ChevronDown = createLucideIcon("chevron-down", __iconNode$s);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$p = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
-const ChevronLeft = createLucideIcon("chevron-left", __iconNode$p);
+const __iconNode$r = [["path", { d: "m15 18-6-6 6-6", key: "1wnfg3" }]];
+const ChevronLeft = createLucideIcon("chevron-left", __iconNode$r);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$o = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
-const ChevronUp = createLucideIcon("chevron-up", __iconNode$o);
+const __iconNode$q = [["path", { d: "m18 15-6-6-6 6", key: "153udz" }]];
+const ChevronUp = createLucideIcon("chevron-up", __iconNode$q);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$p = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
+  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+];
+const CircleAlert = createLucideIcon("circle-alert", __iconNode$p);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$o = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+];
+const Clock = createLucideIcon("clock", __iconNode$o);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15301,11 +15324,12 @@ const ChevronUp = createLucideIcon("chevron-up", __iconNode$o);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$n = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["line", { x1: "12", x2: "12", y1: "8", y2: "12", key: "1pkeuh" }],
-  ["line", { x1: "12", x2: "12.01", y1: "16", y2: "16", key: "4dfq90" }]
+  ["circle", { cx: "8", cy: "8", r: "6", key: "3yglwk" }],
+  ["path", { d: "M18.09 10.37A6 6 0 1 1 10.34 18", key: "t5s6rm" }],
+  ["path", { d: "M7 6h1v4", key: "1obek4" }],
+  ["path", { d: "m16.71 13.88.7.71-2.82 2.82", key: "1rbuyh" }]
 ];
-const CircleAlert = createLucideIcon("circle-alert", __iconNode$n);
+const Coins = createLucideIcon("coins", __iconNode$n);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15313,10 +15337,11 @@ const CircleAlert = createLucideIcon("circle-alert", __iconNode$n);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$m = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["polyline", { points: "12 6 12 12 16 14", key: "68esgv" }]
+  ["path", { d: "M12 15V3", key: "m9g1x1" }],
+  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
+  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
 ];
-const Clock = createLucideIcon("clock", __iconNode$m);
+const Download = createLucideIcon("download", __iconNode$m);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15324,12 +15349,11 @@ const Clock = createLucideIcon("clock", __iconNode$m);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$l = [
-  ["circle", { cx: "8", cy: "8", r: "6", key: "3yglwk" }],
-  ["path", { d: "M18.09 10.37A6 6 0 1 1 10.34 18", key: "t5s6rm" }],
-  ["path", { d: "M7 6h1v4", key: "1obek4" }],
-  ["path", { d: "m16.71 13.88.7.71-2.82 2.82", key: "1rbuyh" }]
+  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
+  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
+  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
 ];
-const Coins = createLucideIcon("coins", __iconNode$l);
+const ExternalLink = createLucideIcon("external-link", __iconNode$l);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15337,30 +15361,6 @@ const Coins = createLucideIcon("coins", __iconNode$l);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$k = [
-  ["path", { d: "M12 15V3", key: "m9g1x1" }],
-  ["path", { d: "M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4", key: "ih7n3h" }],
-  ["path", { d: "m7 10 5 5 5-5", key: "brsn70" }]
-];
-const Download = createLucideIcon("download", __iconNode$k);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$j = [
-  ["path", { d: "M15 3h6v6", key: "1q9fwt" }],
-  ["path", { d: "M10 14 21 3", key: "gplh6r" }],
-  ["path", { d: "M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6", key: "a6xqqp" }]
-];
-const ExternalLink = createLucideIcon("external-link", __iconNode$j);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$i = [
   [
     "path",
     {
@@ -15370,7 +15370,31 @@ const __iconNode$i = [
   ],
   ["circle", { cx: "12", cy: "12", r: "3", key: "1v7zrd" }]
 ];
-const Eye = createLucideIcon("eye", __iconNode$i);
+const Eye = createLucideIcon("eye", __iconNode$k);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$j = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
+  ["path", { d: "M2 12h20", key: "9i4pu4" }]
+];
+const Globe = createLucideIcon("globe", __iconNode$j);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$i = [
+  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
+  ["path", { d: "M12 16v-4", key: "1dtifu" }],
+  ["path", { d: "M12 8h.01", key: "e9boi3" }]
+];
+const Info = createLucideIcon("info", __iconNode$i);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15378,30 +15402,6 @@ const Eye = createLucideIcon("eye", __iconNode$i);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$h = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20", key: "13o1zl" }],
-  ["path", { d: "M2 12h20", key: "9i4pu4" }]
-];
-const Globe = createLucideIcon("globe", __iconNode$h);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$g = [
-  ["circle", { cx: "12", cy: "12", r: "10", key: "1mglay" }],
-  ["path", { d: "M12 16v-4", key: "1dtifu" }],
-  ["path", { d: "M12 8h.01", key: "e9boi3" }]
-];
-const Info = createLucideIcon("info", __iconNode$g);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$f = [
   [
     "path",
     {
@@ -15424,20 +15424,41 @@ const __iconNode$f = [
     }
   ]
 ];
-const Layers = createLucideIcon("layers", __iconNode$f);
+const Layers = createLucideIcon("layers", __iconNode$h);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$e = [
+const __iconNode$g = [
   ["rect", { width: "7", height: "9", x: "3", y: "3", rx: "1", key: "10lvy0" }],
   ["rect", { width: "7", height: "5", x: "14", y: "3", rx: "1", key: "16une8" }],
   ["rect", { width: "7", height: "9", x: "14", y: "12", rx: "1", key: "1hutg5" }],
   ["rect", { width: "7", height: "5", x: "3", y: "16", rx: "1", key: "ldoo1y" }]
 ];
-const LayoutDashboard = createLucideIcon("layout-dashboard", __iconNode$e);
+const LayoutDashboard = createLucideIcon("layout-dashboard", __iconNode$g);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$f = [
+  ["rect", { width: "7", height: "7", x: "3", y: "3", rx: "1", key: "1g98yp" }],
+  ["rect", { width: "7", height: "7", x: "14", y: "3", rx: "1", key: "6d4xhi" }],
+  ["rect", { width: "7", height: "7", x: "14", y: "14", rx: "1", key: "nxv5o0" }],
+  ["rect", { width: "7", height: "7", x: "3", y: "14", rx: "1", key: "1bb6yr" }]
+];
+const LayoutGrid = createLucideIcon("layout-grid", __iconNode$f);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$e = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
+const LoaderCircle = createLucideIcon("loader-circle", __iconNode$e);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15445,20 +15466,22 @@ const LayoutDashboard = createLucideIcon("layout-dashboard", __iconNode$e);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$d = [
-  ["rect", { width: "7", height: "7", x: "3", y: "3", rx: "1", key: "1g98yp" }],
-  ["rect", { width: "7", height: "7", x: "14", y: "3", rx: "1", key: "6d4xhi" }],
-  ["rect", { width: "7", height: "7", x: "14", y: "14", rx: "1", key: "nxv5o0" }],
-  ["rect", { width: "7", height: "7", x: "3", y: "14", rx: "1", key: "1bb6yr" }]
+  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
+  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
 ];
-const LayoutGrid = createLucideIcon("layout-grid", __iconNode$d);
+const Lock = createLucideIcon("lock", __iconNode$d);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
  * This source code is licensed under the ISC license.
  * See the LICENSE file in the root directory of this source tree.
  */
-const __iconNode$c = [["path", { d: "M21 12a9 9 0 1 1-6.219-8.56", key: "13zald" }]];
-const LoaderCircle = createLucideIcon("loader-circle", __iconNode$c);
+const __iconNode$c = [
+  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
+  ["path", { d: "M21 12H9", key: "dn1m92" }],
+  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
+];
+const LogOut = createLucideIcon("log-out", __iconNode$c);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15466,29 +15489,6 @@ const LoaderCircle = createLucideIcon("loader-circle", __iconNode$c);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$b = [
-  ["rect", { width: "18", height: "11", x: "3", y: "11", rx: "2", ry: "2", key: "1w4ew1" }],
-  ["path", { d: "M7 11V7a5 5 0 0 1 10 0v4", key: "fwvmzm" }]
-];
-const Lock = createLucideIcon("lock", __iconNode$b);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$a = [
-  ["path", { d: "m16 17 5-5-5-5", key: "1bji2h" }],
-  ["path", { d: "M21 12H9", key: "dn1m92" }],
-  ["path", { d: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4", key: "1uf3rs" }]
-];
-const LogOut = createLucideIcon("log-out", __iconNode$a);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$9 = [
   [
     "path",
     {
@@ -15498,7 +15498,30 @@ const __iconNode$9 = [
   ],
   ["circle", { cx: "12", cy: "10", r: "3", key: "ilqhr7" }]
 ];
-const MapPin = createLucideIcon("map-pin", __iconNode$9);
+const MapPin = createLucideIcon("map-pin", __iconNode$b);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$a = [
+  ["path", { d: "M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z", key: "a7tn18" }]
+];
+const Moon = createLucideIcon("moon", __iconNode$a);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$9 = [
+  ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
+  ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
+  ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
+  ["path", { d: "M8 16H3v5", key: "1cv678" }]
+];
+const RefreshCw = createLucideIcon("refresh-cw", __iconNode$9);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15506,12 +15529,10 @@ const MapPin = createLucideIcon("map-pin", __iconNode$9);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$8 = [
-  ["path", { d: "M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8", key: "v9h5vc" }],
-  ["path", { d: "M21 3v5h-5", key: "1q7to0" }],
-  ["path", { d: "M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16", key: "3uifl3" }],
-  ["path", { d: "M8 16H3v5", key: "1cv678" }]
+  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
+  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
 ];
-const RefreshCw = createLucideIcon("refresh-cw", __iconNode$8);
+const Search = createLucideIcon("search", __iconNode$8);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15519,17 +15540,6 @@ const RefreshCw = createLucideIcon("refresh-cw", __iconNode$8);
  * See the LICENSE file in the root directory of this source tree.
  */
 const __iconNode$7 = [
-  ["path", { d: "m21 21-4.34-4.34", key: "14j7rj" }],
-  ["circle", { cx: "11", cy: "11", r: "8", key: "4ej97u" }]
-];
-const Search = createLucideIcon("search", __iconNode$7);
-/**
- * @license lucide-react v0.511.0 - ISC
- *
- * This source code is licensed under the ISC license.
- * See the LICENSE file in the root directory of this source tree.
- */
-const __iconNode$6 = [
   [
     "path",
     {
@@ -15538,7 +15548,25 @@ const __iconNode$6 = [
     }
   ]
 ];
-const Shield = createLucideIcon("shield", __iconNode$6);
+const Shield = createLucideIcon("shield", __iconNode$7);
+/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */
+const __iconNode$6 = [
+  ["circle", { cx: "12", cy: "12", r: "4", key: "4exip2" }],
+  ["path", { d: "M12 2v2", key: "tus03m" }],
+  ["path", { d: "M12 20v2", key: "1lh1kg" }],
+  ["path", { d: "m4.93 4.93 1.41 1.41", key: "149t6j" }],
+  ["path", { d: "m17.66 17.66 1.41 1.41", key: "ptbguv" }],
+  ["path", { d: "M2 12h2", key: "1t8f8n" }],
+  ["path", { d: "M20 12h2", key: "1q8mjw" }],
+  ["path", { d: "m6.34 17.66-1.41 1.41", key: "1m8zz5" }],
+  ["path", { d: "m19.07 4.93-1.41 1.41", key: "1shlcs" }]
+];
+const Sun = createLucideIcon("sun", __iconNode$6);
 /**
  * @license lucide-react v0.511.0 - ISC
  *
@@ -15685,6 +15713,7 @@ const TOKEN_LIST = [
     defaultPrice: 12.45,
     description: "Blockchain que permite aplicaciones web completas 100% on-chain sin servidores centralizados. Velocidad submilisegundo.",
     officialUrl: "https://internetcomputer.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/14495/small/Internet_Computer_logo.png",
     explorerUrl: "https://dashboard.internetcomputer.org"
   },
   {
@@ -15705,6 +15734,7 @@ const TOKEN_LIST = [
     defaultPrice: 67800,
     description: "La primera criptomoneda creada por Satoshi Nakamoto en 2009. El oro digital del siglo XXI, suministro máximo 21 millones.",
     officialUrl: "https://bitcoin.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/1/small/bitcoin.png",
     explorerUrl: "https://mempool.space"
   },
   // Polkadot
@@ -15716,6 +15746,7 @@ const TOKEN_LIST = [
     defaultPrice: 8.9,
     description: "Red de parachains soberanas con seguridad compartida. Creada por co-fundador de Ethereum Gavin Wood.",
     officialUrl: "https://polkadot.network",
+    logoUrl: "https://assets.coingecko.com/coins/images/12171/small/polkadot.png",
     explorerUrl: "https://polkadot.subscan.io"
   },
   {
@@ -15737,6 +15768,7 @@ const TOKEN_LIST = [
     defaultPrice: 11.2,
     description: "El centro de la internet de blockchains. El protocolo IBC permite que blockchains soberanas se comuniquen entre sí.",
     officialUrl: "https://cosmos.network",
+    logoUrl: "https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png",
     explorerUrl: "https://mintscan.io"
   },
   {
@@ -15747,6 +15779,7 @@ const TOKEN_LIST = [
     defaultPrice: 0.85,
     description: "Plataforma de IA descentralizada en Cosmos. Agentes autónomos de IA operan servicios económicos sin intervención humana.",
     officialUrl: "https://fetch.ai",
+    logoUrl: "https://assets.coingecko.com/coins/images/5681/small/Fetch.jpg",
     depin: true
   },
   {
@@ -15757,6 +15790,7 @@ const TOKEN_LIST = [
     defaultPrice: 3.5,
     description: "Mercado descentralizado de computación en la nube. Alternativa descentralizada a AWS sin intermediarios.",
     officialUrl: "https://akash.network",
+    logoUrl: "https://assets.coingecko.com/coins/images/12785/small/akash-logo.png",
     depin: true
   },
   {
@@ -15776,7 +15810,8 @@ const TOKEN_LIST = [
     network: "Cosmos",
     defaultPrice: 28.5,
     description: "Blockchain para DeFi avanzado: derivados, futuros y opciones on-chain sin gas fees de trading.",
-    officialUrl: "https://injective.com"
+    officialUrl: "https://injective.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/12882/small/Secondary_Symbol.png"
   },
   // Celestia
   {
@@ -15786,7 +15821,8 @@ const TOKEN_LIST = [
     network: "Celestia",
     defaultPrice: 6.2,
     description: "Primera red modular de disponibilidad de datos. Separa consenso de ejecución para blockchains más baratas y escalables.",
-    officialUrl: "https://celestia.org"
+    officialUrl: "https://celestia.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/31967/small/celestia.png"
   },
   // 0G
   {
@@ -15808,6 +15844,7 @@ const TOKEN_LIST = [
     defaultPrice: 3420,
     description: "La blockchain que inventó los smart contracts y el DeFi moderno. Mayor ecosistema de desarrolladores del mundo.",
     officialUrl: "https://ethereum.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png",
     explorerUrl: "https://etherscan.io"
   },
   {
@@ -15817,7 +15854,8 @@ const TOKEN_LIST = [
     network: "Ethereum",
     defaultPrice: 18.6,
     description: "Infraestructura de oráculos que conecta smart contracts con datos del mundo real. Sin Chainlink, el DeFi no funcionaría.",
-    officialUrl: "https://chain.link"
+    officialUrl: "https://chain.link",
+    logoUrl: "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png"
   },
   {
     symbol: "GRT",
@@ -15942,6 +15980,7 @@ const TOKEN_LIST = [
     defaultPrice: 185.3,
     description: "65,000 TPS con fees de fracciones de centavo. Proof of History para ordenar transacciones sin cuellos de botella.",
     officialUrl: "https://solana.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/4128/small/solana.png",
     explorerUrl: "https://explorer.solana.com"
   },
   {
@@ -15952,6 +15991,7 @@ const TOKEN_LIST = [
     defaultPrice: 8.5,
     description: "Red descentralizada de renderizado GPU. Artistas acceden a capacidad gráfica distribuida para renders 3D y VFX.",
     officialUrl: "https://rendernetwork.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/11636/small/rndr.png",
     depin: true
   },
   {
@@ -15991,7 +16031,8 @@ const TOKEN_LIST = [
     network: "Near",
     defaultPrice: 7.2,
     description: "Blockchain con cuentas de nombres legibles y fees casi nulos. Compatible con Ethereum via Aurora. Sharding automático.",
-    officialUrl: "https://near.org"
+    officialUrl: "https://near.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/10365/small/near.jpg"
   },
   // Avalanche
   {
@@ -16001,7 +16042,8 @@ const TOKEN_LIST = [
     network: "Avalanche",
     defaultPrice: 38.75,
     description: "Alta velocidad con finalidad menor a 2 segundos. Arquitectura de subredes para blockchains personalizadas.",
-    officialUrl: "https://avax.network"
+    officialUrl: "https://avax.network",
+    logoUrl: "https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png"
   },
   // Cardano
   {
@@ -16011,7 +16053,8 @@ const TOKEN_LIST = [
     network: "Cardano",
     defaultPrice: 0.45,
     description: "La blockchain académica. Cada feature respaldada por papers peer-reviewed. Fundada por Charles Hoskinson.",
-    officialUrl: "https://cardano.org"
+    officialUrl: "https://cardano.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/975/small/cardano.png"
   },
   // Mina
   {
@@ -16021,7 +16064,8 @@ const TOKEN_LIST = [
     network: "Mina",
     defaultPrice: 0.55,
     description: "La blockchain más liviana del mundo (22kb). Usa zk-SNARKs para verificar el estado completo. Privacy by design.",
-    officialUrl: "https://minaprotocol.com"
+    officialUrl: "https://minaprotocol.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/15628/small/JM4_vQ34_400x400.png"
   },
   // Bittensor
   {
@@ -16032,6 +16076,7 @@ const TOKEN_LIST = [
     defaultPrice: 380,
     description: "Red descentralizada de inteligencia artificial. Los modelos de ML compiten y se recompensan por su utilidad real.",
     officialUrl: "https://bittensor.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/28452/small/ARUsPeNQ_400x400.jpeg",
     depin: true
   },
   // Arweave
@@ -16043,6 +16088,7 @@ const TOKEN_LIST = [
     defaultPrice: 18,
     description: "Almacenamiento permanente de datos on-chain. Pago único para guardar datos para siempre. La biblioteca permanente de internet.",
     officialUrl: "https://arweave.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/4343/small/oRt6SiEN_400x400.jpg",
     depin: true
   },
   // Stablecoins
@@ -16053,7 +16099,8 @@ const TOKEN_LIST = [
     network: "Stablecoins",
     defaultPrice: 1,
     description: "Stablecoin más utilizada del mundo, anclada 1:1 al dólar. El dólar digital del ecosistema crypto.",
-    officialUrl: "https://tether.to"
+    officialUrl: "https://tether.to",
+    logoUrl: "https://assets.coingecko.com/coins/images/325/small/Tether.png"
   },
   {
     symbol: "USDC",
@@ -16062,7 +16109,8 @@ const TOKEN_LIST = [
     network: "Stablecoins",
     defaultPrice: 1,
     description: "Stablecoin regulada de Circle/Coinbase. Transparencia total de reservas. Compatible con DeFi institucional.",
-    officialUrl: "https://circle.com/usdc"
+    officialUrl: "https://circle.com/usdc",
+    logoUrl: "https://assets.coingecko.com/coins/images/6319/small/usdc.png"
   }
 ];
 function getTextColorForBg(hexColor) {
@@ -36890,7 +36938,7 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   LocalStorage
 }, Symbol.toStringTag, { value: "Module" }));
 const ONE_HOUR_IN_NANOSECONDS = BigInt(36e11);
-const DEFAULT_IDENTITY_PROVIDER = "https://id.ai";
+const DEFAULT_IDENTITY_PROVIDER = "http://rdmx6-jaaaa-aaaaa-aaadq-cai.localhost:8081/";
 const InternetIdentityReactContext = reactExports.createContext(
   void 0
 );
@@ -37440,32 +37488,6 @@ function detectBrowser() {
   if (ua.includes("Chrome/")) return "chrome";
   return "other";
 }
-function getOisyInstallUrl() {
-  const browser = detectBrowser();
-  const chromeUrl = "https://chromewebstore.google.com/detail/oisy-wallet/pockendbbajckdfkpbejbjgeobgblbfb";
-  switch (browser) {
-    case "edge":
-      return {
-        url: chromeUrl,
-        browser,
-        note: "En Edge: abre Chrome Web Store → habilita 'Permitir extensiones de otras tiendas' → Instalar"
-      };
-    case "firefox":
-      return {
-        url: "https://oisy.com",
-        browser,
-        note: "Oisy no tiene extensión para Firefox aún. Usa la versión web en oisy.com"
-      };
-    case "safari":
-      return {
-        url: "https://oisy.com",
-        browser,
-        note: "Oisy no tiene extensión para Safari. Usa la versión web en oisy.com"
-      };
-    default:
-      return { url: chromeUrl, browser };
-  }
-}
 const iiAdapter = {
   id: "Internet Identity",
   label: "Internet Identity",
@@ -37478,20 +37500,13 @@ const oisyAdapter = {
   id: "Oisy",
   label: "Oisy",
   network: "ICP",
-  isAvailable: () => typeof window !== "undefined" && !!window.oisy,
+  isAvailable: () => false,
+  // always show as external link
   connect: async () => {
-    try {
-      const oisy = window.oisy;
-      if (!oisy) return { address: "", isReal: false };
-      const result = await oisy.connect();
-      const address = typeof result === "object" && "address" in result ? result.address : "";
-      if (!address) return { address: "", isReal: false };
-      return { address, isReal: true };
-    } catch {
-      return { address: "", isReal: false };
-    }
+    window.open("https://oisy.com", "_blank");
+    return { address: "", isReal: false };
   },
-  installUrl: "https://chromewebstore.google.com/detail/oisy-wallet/pockendbbajckdfkpbejbjgeobgblbfb"
+  installUrl: "https://oisy.com"
 };
 const COSMOS_CHAIN_ID = "cosmoshub-4";
 const keplrAdapter = {
@@ -37516,8 +37531,8 @@ const keplrAdapter = {
   edgeInstallUrl: "https://microsoftedge.microsoft.com/addons/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap"
 };
 const SUPPORTED_WALLETS = [
-  iiAdapter,
   oisyAdapter,
+  iiAdapter,
   keplrAdapter
 ];
 const WalletCtx = reactExports.createContext(null);
@@ -37548,6 +37563,32 @@ async function fetchKeplrATOMBalance(address, onBalance) {
     return;
   }
 }
+async function fetchICPBalanceRosetta(principal) {
+  var _a3, _b3;
+  try {
+    const res = await fetch(
+      "https://rosetta-api.internetcomputer.org/account/balance",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          network_identifier: {
+            blockchain: "Internet Computer",
+            network: "00000000000000020101"
+          },
+          account_identifier: { address: principal }
+        })
+      }
+    );
+    if (!res.ok) return 0;
+    const data = await res.json();
+    const raw = (_b3 = (_a3 = data.balances) == null ? void 0 : _a3[0]) == null ? void 0 : _b3.value;
+    if (!raw) return 0;
+    return Number(raw) / 1e8;
+  } catch {
+    return 0;
+  }
+}
 function WalletProvider({ children }) {
   const [connectedWallets, setConnectedWallets] = reactExports.useState(
     []
@@ -37568,92 +37609,101 @@ function WalletProvider({ children }) {
   const setBalance = reactExports.useCallback(
     (network, address, symbol, amount) => {
       const key = `dcss_${network}_${address}_${symbol}`;
-      if (amount <= 0) localStorage.removeItem(key);
-      else localStorage.setItem(key, amount.toString());
+      if (amount <= 0) {
+        localStorage.removeItem(key);
+      } else {
+        localStorage.setItem(key, String(amount));
+      }
       bumpTick();
     },
     [bumpTick]
   );
   const connectWallet = reactExports.useCallback(
-    async (network, walletType) => {
+    async (_network, walletType) => {
       const adapter = SUPPORTED_WALLETS.find((w2) => w2.id === walletType);
       if (!adapter) {
-        return { network, walletType, address: "", isReal: false };
-      }
-      if (walletType === "Oisy" && !adapter.isAvailable()) {
-        const { url, note } = getOisyInstallUrl();
-        window.open(url, "_blank", "noopener,noreferrer");
         return {
-          network,
+          network: _network,
           walletType,
           address: "",
           isReal: false,
-          redirected: true,
-          installNote: note
+          redirected: false
         };
       }
-      if (walletType === "Keplr" && !adapter.isAvailable()) {
-        const browser = detectBrowser();
-        const url = browser === "edge" ? "https://microsoftedge.microsoft.com/addons/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap" : "https://www.keplr.app/download";
-        window.open(url, "_blank", "noopener,noreferrer");
+      if (adapter.id === "Oisy") {
+        await adapter.connect();
         return {
-          network,
+          network: adapter.network ?? _network,
           walletType,
           address: "",
           isReal: false,
           redirected: true,
-          installNote: browser === "edge" ? "Instala Keplr desde Microsoft Edge Add-ons, luego vuelve aquí y conecta." : "Instala la extensión de Keplr y vuelve a conectar."
+          installNote: "Abriendo Oisy Wallet en una nueva pestaña..."
+        };
+      }
+      if (!adapter.isAvailable()) {
+        window.open(adapter.installUrl, "_blank");
+        return {
+          network: adapter.network ?? _network,
+          walletType,
+          address: "",
+          isReal: false,
+          redirected: true,
+          installNote: `Instala ${walletType} y vuelve a conectar`
         };
       }
       const result = await adapter.connect();
       if (!result.address || !result.isReal) {
-        return { network, walletType, address: "", isReal: false };
+        return {
+          network: adapter.network ?? _network,
+          walletType,
+          address: result.address,
+          isReal: false
+        };
       }
-      const walletNetwork = adapter.network ?? network;
       const wallet = {
-        network: walletNetwork,
+        network: adapter.network ?? _network,
         walletType,
         address: result.address,
-        isReal: true
+        isReal: result.isReal
       };
       setConnectedWallets((prev) => {
-        const filtered = prev.filter((w2) => w2.walletType !== walletType);
-        return [...filtered, wallet];
+        const exists = prev.find(
+          (w2) => w2.address === wallet.address && w2.walletType === walletType
+        );
+        return exists ? prev : [...prev, wallet];
       });
       setActiveWallet(wallet);
-      bumpTick();
-      if (walletType === "Keplr") {
-        fetchKeplrATOMBalance(result.address, (amount) => {
-          localStorage.setItem(
-            `dcss_Cosmos_${result.address}_ATOM`,
-            amount.toString()
-          );
-          setBalanceTick((t) => t + 1);
+      if (walletType === "Internet Identity" || walletType === "Oisy") {
+        fetchICPBalanceRosetta(result.address).then((bal) => {
+          if (bal > 0) {
+            setBalance(wallet.network, wallet.address, "ICP", bal);
+          }
+        });
+      } else if (walletType === "Keplr") {
+        fetchKeplrATOMBalance(result.address, (atom) => {
+          setBalance(wallet.network, wallet.address, "ATOM", atom);
         });
       }
       return wallet;
     },
-    [bumpTick]
+    [setBalance]
   );
-  const disconnectWallet = reactExports.useCallback(
-    (address) => {
-      setConnectedWallets((prev) => {
-        const wallet = prev.find((w2) => w2.address === address);
-        if (wallet) {
-          const keysToRemove = [];
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key == null ? void 0 : key.startsWith(`dcss_${wallet.network}_${address}_`))
-              keysToRemove.push(key);
-          }
-          for (const k2 of keysToRemove) localStorage.removeItem(k2);
-        }
-        return prev.filter((w2) => w2.address !== address);
-      });
-      setActiveWallet((prev) => (prev == null ? void 0 : prev.address) === address ? null : prev);
-      bumpTick();
-    },
-    [bumpTick]
+  const disconnectWallet = reactExports.useCallback((address) => {
+    setConnectedWallets((prev) => prev.filter((w2) => w2.address !== address));
+    setActiveWallet((prev) => (prev == null ? void 0 : prev.address) === address ? null : prev);
+  }, []);
+  const isEVMAvailable2 = reactExports.useCallback(
+    () => typeof window !== "undefined" && !!window.ethereum,
+    []
+  );
+  const isSolanaAvailable = reactExports.useCallback(
+    () => typeof window !== "undefined" && !!window.solana,
+    []
+  );
+  const isKeplrAvailable = reactExports.useCallback(
+    () => typeof window !== "undefined" && !!window.keplr,
+    []
   );
   const value = reactExports.useMemo(
     () => ({
@@ -37665,9 +37715,9 @@ function WalletProvider({ children }) {
       getBalance,
       setBalance,
       balanceTick,
-      isEVMAvailable: () => false,
-      isSolanaAvailable: () => false,
-      isKeplrAvailable: () => typeof window !== "undefined" && !!window.keplr
+      isEVMAvailable: isEVMAvailable2,
+      isSolanaAvailable,
+      isKeplrAvailable
     }),
     [
       connectedWallets,
@@ -37676,14 +37726,17 @@ function WalletProvider({ children }) {
       disconnectWallet,
       getBalance,
       setBalance,
-      balanceTick
+      balanceTick,
+      isEVMAvailable2,
+      isSolanaAvailable,
+      isKeplrAvailable
     ]
   );
   return /* @__PURE__ */ jsxRuntimeExports.jsx(WalletCtx.Provider, { value, children });
 }
 function useWallet() {
   const ctx = reactExports.useContext(WalletCtx);
-  if (!ctx) throw new Error("useWallet must be used within WalletProvider");
+  if (!ctx) throw new Error("useWallet must be used inside WalletProvider");
   return ctx;
 }
 const CHAINS = ["ICP", "Ethereum", "Solana", "Cosmos"];
@@ -38046,124 +38099,6 @@ function BridgePanel() {
       }
     )
   ] });
-}
-function CircuitBackground() {
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(
-    "div",
-    {
-      "aria-hidden": "true",
-      style: {
-        position: "fixed",
-        inset: 0,
-        zIndex: 0,
-        pointerEvents: "none",
-        overflow: "hidden"
-      },
-      children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-        "svg",
-        {
-          width: "100%",
-          height: "100%",
-          xmlns: "http://www.w3.org/2000/svg",
-          style: { position: "absolute", inset: 0 },
-          role: "img",
-          "aria-label": "Circuit board background pattern",
-          children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("defs", { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              "pattern",
-              {
-                id: "circuit-pattern",
-                x: "0",
-                y: "0",
-                width: "80",
-                height: "80",
-                patternUnits: "userSpaceOnUse",
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "0",
-                      y1: "20",
-                      x2: "80",
-                      y2: "20",
-                      stroke: "rgba(0,212,184,0.04)",
-                      strokeWidth: "0.5"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "0",
-                      y1: "60",
-                      x2: "80",
-                      y2: "60",
-                      stroke: "rgba(0,212,184,0.04)",
-                      strokeWidth: "0.5"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "20",
-                      y1: "0",
-                      x2: "20",
-                      y2: "80",
-                      stroke: "rgba(0,212,184,0.04)",
-                      strokeWidth: "0.5"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "60",
-                      y1: "0",
-                      x2: "60",
-                      y2: "80",
-                      stroke: "rgba(0,212,184,0.04)",
-                      strokeWidth: "0.5"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "0",
-                      y1: "40",
-                      x2: "80",
-                      y2: "40",
-                      stroke: "rgba(0,212,184,0.06)",
-                      strokeWidth: "1"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "line",
-                    {
-                      x1: "40",
-                      y1: "0",
-                      x2: "40",
-                      y2: "80",
-                      stroke: "rgba(0,212,184,0.06)",
-                      strokeWidth: "1"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "20", cy: "20", r: "1.5", fill: "rgba(0,212,184,0.10)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "60", cy: "20", r: "1.5", fill: "rgba(0,212,184,0.10)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "20", cy: "60", r: "1.5", fill: "rgba(0,212,184,0.10)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "60", cy: "60", r: "1.5", fill: "rgba(0,212,184,0.10)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "40", cy: "40", r: "2.5", fill: "rgba(0,212,184,0.14)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "40", cy: "40", r: "1", fill: "rgba(0,212,184,0.22)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "40", cy: "20", r: "1", fill: "rgba(0,212,184,0.08)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "40", cy: "60", r: "1", fill: "rgba(0,212,184,0.08)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "20", cy: "40", r: "1", fill: "rgba(0,212,184,0.08)" }),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("circle", { cx: "60", cy: "40", r: "1", fill: "rgba(0,212,184,0.08)" })
-                ]
-              }
-            ) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("rect", { width: "100%", height: "100%", fill: "url(#circuit-pattern)" })
-          ]
-        }
-      )
-    }
-  );
 }
 function Skeleton({ className, ...props }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -40374,7 +40309,7 @@ const WALLET_ICONS = {
 };
 const WALLET_DESC = {
   "Internet Identity": "Login con Internet Computer — sin seed phrase",
-  Oisy: "Wallet multi-chain nativa de ICP",
+  Oisy: "Wallet multi-chain nativa de ICP — Abre oisy.com",
   Keplr: "Wallet del ecosistema Cosmos — ATOM, OSMO y más"
 };
 const WALLET_NETWORK_BADGE = {
@@ -40382,75 +40317,6 @@ const WALLET_NETWORK_BADGE = {
   Oisy: "ICP",
   Keplr: "Cosmos"
 };
-function OisyInstallInstructions() {
-  const browser = detectBrowser();
-  if (browser === "edge") {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "text-[11px] p-3 rounded-lg mt-1",
-        style: {
-          background: "rgba(0,212,184,0.06)",
-          border: "1px solid rgba(0,212,184,0.2)",
-          color: "var(--text-muted)"
-        },
-        children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "p",
-            {
-              className: "font-semibold mb-1",
-              style: { color: "var(--accent-color)" },
-              children: "Instalación en Edge"
-            }
-          ),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("ol", { className: "list-decimal ml-3 space-y-0.5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Ve a Chrome Web Store (se abrirá automáticamente)" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { children: [
-              "En Edge, activa",
-              " ",
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { style: { color: "var(--text-primary)" }, children: "“Permitir extensiones de otras tiendas”" }),
-              " ",
-              "en la barra inferior"
-            ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Haz clic en “Agregar a Chrome” — funciona en Edge también" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: "Regresa aquí y conecta" })
-          ] })
-        ]
-      }
-    );
-  }
-  if (browser === "firefox" || browser === "safari") {
-    return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "div",
-      {
-        className: "text-[11px] p-3 rounded-lg mt-1",
-        style: {
-          background: "rgba(255,100,100,0.06)",
-          border: "1px solid rgba(255,100,100,0.2)",
-          color: "var(--text-muted)"
-        },
-        children: [
-          "Oisy no tiene extensión para",
-          " ",
-          browser === "firefox" ? "Firefox" : "Safari",
-          " aún. Usa la versión web en",
-          " ",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "a",
-            {
-              href: "https://oisy.com",
-              target: "_blank",
-              rel: "noopener noreferrer",
-              style: { color: "var(--accent-color)" },
-              children: "oisy.com"
-            }
-          )
-        ]
-      }
-    );
-  }
-  return null;
-}
 function KeplrInstallInstructions() {
   const browser = detectBrowser();
   if (browser === "edge") {
@@ -40510,7 +40376,17 @@ function WalletConnectModal({
   const { connectWallet, connectedWallets } = useWallet();
   const [connecting, setConnecting] = reactExports.useState(null);
   const [showKeplrInstall, setShowKeplrInstall] = reactExports.useState(false);
+  const [oisyOpened, setOisyOpened] = reactExports.useState(false);
   async function handleConnect(walletId) {
+    if (walletId === "Oisy") {
+      window.open("https://oisy.com", "_blank");
+      setOisyOpened(true);
+      ue.info("Abriendo Oisy Wallet...", {
+        description: "Conéctate en oisy.com y vuelve cuando tengas tu wallet lista",
+        duration: 6e3
+      });
+      return;
+    }
     setConnecting(walletId);
     const wallet = await connectWallet("ICP", walletId);
     setConnecting(null);
@@ -40545,19 +40421,22 @@ function WalletConnectModal({
         background: "var(--bg-surface)",
         border: "1px solid var(--border-subtle)"
       },
-      "data-ocid": "wallet.dialog",
+      "data-ocid": "wallet.modal",
       children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs(DialogHeader, { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(DialogTitle, { style: { color: "var(--text-primary)" }, children: "Conectar Wallet" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-xs mt-1", style: { color: "var(--text-muted)" }, children: "Selecciona tu wallet para ver balances y operar en tu red." })
-        ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-3 mt-2", children: SUPPORTED_WALLETS.map((adapter) => {
+        /* @__PURE__ */ jsxRuntimeExports.jsx(DialogHeader, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(
+          DialogTitle,
+          {
+            className: "text-base font-bold",
+            style: { color: "var(--text-primary)" },
+            children: "Conectar Wallet"
+          }
+        ) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-2 mt-1", children: SUPPORTED_WALLETS.map((adapter) => {
           const isConnected = activeAddrs.has(adapter.id);
           const isConnecting = connecting === adapter.id;
           const isOisy = adapter.id === "Oisy";
           const isKeplr = adapter.id === "Keplr";
           const notInstalled = !adapter.isAvailable();
-          const oisyNotInstalled = isOisy && notInstalled;
           const keplrNotInstalled = isKeplr && notInstalled;
           return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
             /* @__PURE__ */ jsxRuntimeExports.jsxs(
@@ -40569,7 +40448,7 @@ function WalletConnectModal({
                 className: "w-full flex items-center gap-4 p-4 rounded-xl transition-all text-left",
                 style: {
                   background: isConnected ? "var(--accent-dim)" : "var(--bg-elevated)",
-                  border: isConnected ? "1px solid rgba(0,212,184,0.4)" : isKeplr ? "1px solid rgba(118,90,226,0.25)" : "1px solid var(--border-subtle)",
+                  border: isConnected ? "1px solid rgba(0,212,184,0.4)" : isKeplr ? "1px solid rgba(118,90,226,0.25)" : isOisy ? "1px solid rgba(0,212,184,0.35)" : "1px solid var(--border-subtle)",
                   opacity: connecting && !isConnecting ? 0.5 : 1,
                   cursor: connecting ? "not-allowed" : "pointer"
                 },
@@ -40580,8 +40459,8 @@ function WalletConnectModal({
                     {
                       className: "w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold shrink-0 font-mono",
                       style: {
-                        background: isKeplr ? "rgba(118,90,226,0.12)" : "var(--bg-base)",
-                        border: isKeplr ? "1px solid rgba(118,90,226,0.35)" : "1px solid var(--border-subtle)",
+                        background: isKeplr ? "rgba(118,90,226,0.12)" : isOisy ? "rgba(0,212,184,0.08)" : "var(--bg-base)",
+                        border: isKeplr ? "1px solid rgba(118,90,226,0.35)" : isOisy ? "1px solid rgba(0,212,184,0.3)" : "1px solid var(--border-subtle)",
                         color: isKeplr ? "#765AE2" : "var(--accent-color)"
                       },
                       children: WALLET_ICONS[adapter.id] ?? adapter.id.slice(0, 2).toUpperCase()
@@ -40608,6 +40487,20 @@ function WalletConnectModal({
                           children: WALLET_NETWORK_BADGE[adapter.id]
                         }
                       ),
+                      isOisy && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        "span",
+                        {
+                          className: "text-[9px] px-1.5 py-0.5 rounded-full font-semibold tracking-wide flex items-center gap-1",
+                          style: {
+                            background: "rgba(0,212,184,0.08)",
+                            color: "var(--accent-color)"
+                          },
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(ExternalLink, { size: 8 }),
+                            "oisy.com"
+                          ]
+                        }
+                      ),
                       isConnected && /* @__PURE__ */ jsxRuntimeExports.jsx(
                         "span",
                         {
@@ -40629,17 +40522,6 @@ function WalletConnectModal({
                           },
                           children: browser === "edge" ? "Disponible en Edge" : "No instalado"
                         }
-                      ),
-                      oisyNotInstalled && /* @__PURE__ */ jsxRuntimeExports.jsx(
-                        "span",
-                        {
-                          className: "text-[10px] px-1.5 py-0.5 rounded-full font-semibold",
-                          style: {
-                            background: "rgba(255,180,0,0.12)",
-                            color: "#ffb400"
-                          },
-                          children: browser === "edge" ? "Instalar en Edge" : browser === "firefox" ? "Sin extensión" : browser === "safari" ? "Sin extensión" : "No instalado"
-                        }
                       )
                     ] }),
                     /* @__PURE__ */ jsxRuntimeExports.jsx(
@@ -40647,7 +40529,7 @@ function WalletConnectModal({
                       {
                         className: "text-xs mt-0.5 truncate",
                         style: { color: "var(--text-muted)" },
-                        children: keplrNotInstalled && browser === "edge" ? "Click para abrir Edge Add-ons e instalar Keplr" : oisyNotInstalled && browser === "edge" ? "Click para abrir Chrome Web Store (compatible con Edge)" : WALLET_DESC[adapter.id]
+                        children: isOisy && oisyOpened ? "Abriendo Oisy Wallet..." : keplrNotInstalled && browser === "edge" ? "Click para abrir Edge Add-ons e instalar Keplr" : WALLET_DESC[adapter.id]
                       }
                     )
                   ] }),
@@ -40660,11 +40542,18 @@ function WalletConnectModal({
                         color: isKeplr ? "#765AE2" : "var(--accent-color)"
                       }
                     }
+                  ),
+                  isOisy && !isConnecting && /* @__PURE__ */ jsxRuntimeExports.jsx(
+                    ExternalLink,
+                    {
+                      size: 14,
+                      className: "shrink-0",
+                      style: { color: "var(--text-muted)" }
+                    }
                   )
                 ]
               }
             ),
-            isOisy && oisyNotInstalled && /* @__PURE__ */ jsxRuntimeExports.jsx(OisyInstallInstructions, {}),
             isKeplr && (keplrNotInstalled || showKeplrInstall) && /* @__PURE__ */ jsxRuntimeExports.jsx(KeplrInstallInstructions, {})
           ] }, adapter.id);
         }) }),
@@ -40707,7 +40596,12 @@ const NETWORK_NATIVE$1 = {
   Cardano: "ADA",
   Celestia: "TIA"
 };
-function Navbar({ activeTab, onTabChange }) {
+function Navbar({
+  activeTab,
+  onTabChange,
+  theme,
+  onThemeToggle
+}) {
   const {
     connectedWallets,
     activeWallet,
@@ -40810,194 +40704,214 @@ function Navbar({ activeTab, onTabChange }) {
                 item.id
               );
             }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex items-center gap-2", children: activeWallet ? /* @__PURE__ */ jsxRuntimeExports.jsxs(DropdownMenu, { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(DropdownMenuTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "button",
                 {
                   type: "button",
-                  className: "flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono border transition-colors",
+                  onClick: onThemeToggle,
+                  className: "flex items-center justify-center rounded-full transition-colors",
                   style: {
-                    background: "rgba(0,212,184,0.08)",
-                    borderColor: "rgba(0,212,184,0.35)",
-                    color: "#00D4B8"
+                    width: "32px",
+                    height: "32px",
+                    background: theme === "midnight" ? "rgba(120,160,255,0.12)" : "rgba(255,200,80,0.12)",
+                    border: theme === "midnight" ? "1px solid rgba(120,160,255,0.3)" : "1px solid rgba(255,200,80,0.35)",
+                    color: theme === "midnight" ? "#8ab4f8" : "#f5c842"
                   },
-                  "data-ocid": "nav.wallet.toggle",
-                  children: [
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      "span",
-                      {
-                        className: "w-2 h-2 rounded-full animate-pulse_neon",
-                        style: { background: "#00D4B8" }
-                      }
-                    ),
-                    truncateAddr(activeWallet.address),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { size: 12 })
-                  ]
+                  title: theme === "midnight" ? "Cambiar a Claro" : "Cambiar a Midnight",
+                  "data-ocid": "nav.theme.toggle",
+                  children: theme === "midnight" ? /* @__PURE__ */ jsxRuntimeExports.jsx(Sun, { size: 14 }) : /* @__PURE__ */ jsxRuntimeExports.jsx(Moon, { size: 14 })
                 }
-              ) }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                DropdownMenuContent,
-                {
-                  align: "end",
-                  className: "w-64",
-                  style: {
-                    background: "#0F1513",
-                    border: "1px solid rgba(0,212,184,0.2)"
-                  },
-                  children: [
-                    connectedWallets.map((w2) => {
-                      const bal = getWalletBalance(w2.network, w2.address);
-                      const usd = getWalletUSD(w2.network, w2.address);
-                      return /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                        DropdownMenuItem,
+              ),
+              activeWallet ? /* @__PURE__ */ jsxRuntimeExports.jsxs(DropdownMenu, { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx(DropdownMenuTrigger, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  "button",
+                  {
+                    type: "button",
+                    className: "flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-mono border transition-colors",
+                    style: {
+                      background: "rgba(0,212,184,0.08)",
+                      borderColor: "rgba(0,212,184,0.35)",
+                      color: "#00D4B8"
+                    },
+                    "data-ocid": "nav.wallet.toggle",
+                    children: [
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        "span",
                         {
-                          onClick: () => setActiveWallet(w2),
-                          className: "flex flex-col items-start gap-0.5 cursor-pointer py-2",
-                          style: {
-                            color: activeWallet.address === w2.address ? "#00D4B8" : "#E8ECEB"
-                          },
-                          children: [
-                            /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-medium", children: [
-                              w2.walletType,
-                              " · ",
-                              w2.network
-                            ] }),
-                            /* @__PURE__ */ jsxRuntimeExports.jsx(
-                              "span",
-                              {
-                                className: "text-[10px] font-mono",
-                                style: { color: "#A9B3AF" },
-                                children: truncateAddr(w2.address)
-                              }
-                            ),
-                            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mt-0.5", children: [
+                          className: "w-2 h-2 rounded-full animate-pulse_neon",
+                          style: { background: "#00D4B8" }
+                        }
+                      ),
+                      truncateAddr(activeWallet.address),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { size: 12 })
+                    ]
+                  }
+                ) }),
+                /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                  DropdownMenuContent,
+                  {
+                    align: "end",
+                    className: "w-64",
+                    style: {
+                      background: "#0F1513",
+                      border: "1px solid rgba(0,212,184,0.2)"
+                    },
+                    children: [
+                      connectedWallets.map((w2) => {
+                        const bal = getWalletBalance(w2.network, w2.address);
+                        const usd = getWalletUSD(w2.network, w2.address);
+                        return /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                          DropdownMenuItem,
+                          {
+                            onClick: () => setActiveWallet(w2),
+                            className: "flex flex-col items-start gap-0.5 cursor-pointer py-2",
+                            style: {
+                              color: activeWallet.address === w2.address ? "#00D4B8" : "#E8ECEB"
+                            },
+                            children: [
+                              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-xs font-medium", children: [
+                                w2.walletType,
+                                " · ",
+                                w2.network
+                              ] }),
                               /* @__PURE__ */ jsxRuntimeExports.jsx(
                                 "span",
                                 {
-                                  className: "text-[11px] font-semibold",
-                                  style: { color: bal ? "#1DE9B6" : "#5A6560" },
-                                  children: bal ? `${bal.amount.toLocaleString(void 0, { maximumFractionDigits: 6 })} ${bal.symbol}` : "—"
+                                  className: "text-[10px] font-mono",
+                                  style: { color: "#A9B3AF" },
+                                  children: truncateAddr(w2.address)
                                 }
                               ),
-                              usd != null && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                                "span",
-                                {
-                                  className: "text-[10px]",
-                                  style: { color: "#A9B3AF" },
-                                  children: [
-                                    "$",
-                                    usd.toLocaleString(void 0, {
-                                      maximumFractionDigits: 2
-                                    })
-                                  ]
-                                }
-                              )
-                            ] })
+                              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2 mt-0.5", children: [
+                                /* @__PURE__ */ jsxRuntimeExports.jsx(
+                                  "span",
+                                  {
+                                    className: "text-[11px] font-semibold",
+                                    style: { color: bal ? "#1DE9B6" : "#5A6560" },
+                                    children: bal ? `${bal.amount.toLocaleString(void 0, { maximumFractionDigits: 6 })} ${bal.symbol}` : "—"
+                                  }
+                                ),
+                                usd != null && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                                  "span",
+                                  {
+                                    className: "text-[10px]",
+                                    style: { color: "#A9B3AF" },
+                                    children: [
+                                      "$",
+                                      usd.toLocaleString(void 0, {
+                                        maximumFractionDigits: 2
+                                      })
+                                    ]
+                                  }
+                                )
+                              ] })
+                            ]
+                          },
+                          w2.address
+                        );
+                      }),
+                      hasAnyBalance && /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        "div",
+                        {
+                          className: "px-2 py-1.5 flex items-center justify-between",
+                          style: {
+                            borderTop: "1px solid rgba(0,212,184,0.1)",
+                            borderBottom: "1px solid rgba(0,212,184,0.1)"
+                          },
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(
+                              "span",
+                              {
+                                className: "text-[10px]",
+                                style: { color: "#A9B3AF" },
+                                children: "Total Portfolio"
+                              }
+                            ),
+                            /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                              "span",
+                              {
+                                className: "text-[11px] font-bold",
+                                style: { color: "#00D4B8" },
+                                children: [
+                                  "$",
+                                  totalPortfolio.toLocaleString(void 0, {
+                                    maximumFractionDigits: 2
+                                  }),
+                                  " ",
+                                  "USD"
+                                ]
+                              }
+                            )
                           ]
-                        },
-                        w2.address
-                      );
-                    }),
-                    hasAnyBalance && /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      "div",
-                      {
-                        className: "px-2 py-1.5 flex items-center justify-between",
-                        style: {
-                          borderTop: "1px solid rgba(0,212,184,0.1)",
-                          borderBottom: "1px solid rgba(0,212,184,0.1)"
-                        },
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(
-                            "span",
-                            {
-                              className: "text-[10px]",
-                              style: { color: "#A9B3AF" },
-                              children: "Total Portfolio"
-                            }
-                          ),
-                          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                            "span",
-                            {
-                              className: "text-[11px] font-bold",
-                              style: { color: "#00D4B8" },
-                              children: [
-                                "$",
-                                totalPortfolio.toLocaleString(void 0, {
-                                  maximumFractionDigits: 2
-                                }),
-                                " ",
-                                "USD"
-                              ]
-                            }
-                          )
-                        ]
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsx(
-                      DropdownMenuSeparator,
-                      {
-                        style: { background: "rgba(0,212,184,0.1)" }
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      DropdownMenuItem,
-                      {
-                        onClick: () => {
-                          setWalletModalOpen(true);
-                        },
-                        style: { color: "#00D4B8" },
-                        "data-ocid": "nav.connect_wallet.button",
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-2" }),
-                          "Add Wallet"
-                        ]
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      DropdownMenuItem,
-                      {
-                        onClick: () => onTabChange("wallets"),
-                        style: { color: "#00D4B8" },
-                        "data-ocid": "nav.wallets.link",
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-2" }),
-                          "Manage Wallets"
-                        ]
-                      }
-                    ),
-                    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-                      DropdownMenuItem,
-                      {
-                        onClick: () => disconnectWallet(activeWallet.address),
-                        style: { color: "#ef4444" },
-                        "data-ocid": "nav.disconnect.button",
-                        children: [
-                          /* @__PURE__ */ jsxRuntimeExports.jsx(LogOut, { size: 13, className: "mr-2" }),
-                          "Disconnect"
-                        ]
-                      }
-                    )
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsx(
+                        DropdownMenuSeparator,
+                        {
+                          style: { background: "rgba(0,212,184,0.1)" }
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        DropdownMenuItem,
+                        {
+                          onClick: () => {
+                            setWalletModalOpen(true);
+                          },
+                          style: { color: "#00D4B8" },
+                          "data-ocid": "nav.connect_wallet.button",
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-2" }),
+                            "Add Wallet"
+                          ]
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        DropdownMenuItem,
+                        {
+                          onClick: () => onTabChange("wallets"),
+                          style: { color: "#00D4B8" },
+                          "data-ocid": "nav.wallets.link",
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-2" }),
+                            "Manage Wallets"
+                          ]
+                        }
+                      ),
+                      /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                        DropdownMenuItem,
+                        {
+                          onClick: () => disconnectWallet(activeWallet.address),
+                          style: { color: "#ef4444" },
+                          "data-ocid": "nav.disconnect.button",
+                          children: [
+                            /* @__PURE__ */ jsxRuntimeExports.jsx(LogOut, { size: 13, className: "mr-2" }),
+                            "Disconnect"
+                          ]
+                        }
+                      )
+                    ]
+                  }
+                )
+              ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
+                Button,
+                {
+                  onClick: () => setWalletModalOpen(true),
+                  size: "sm",
+                  className: "rounded-full text-xs font-semibold px-4",
+                  style: {
+                    background: "#00D4B8",
+                    color: "#070B0A",
+                    border: "none"
+                  },
+                  "data-ocid": "nav.connect_wallet.button",
+                  children: [
+                    /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-1.5" }),
+                    "Connect Wallet"
                   ]
                 }
               )
-            ] }) : /* @__PURE__ */ jsxRuntimeExports.jsxs(
-              Button,
-              {
-                onClick: () => setWalletModalOpen(true),
-                size: "sm",
-                className: "rounded-full text-xs font-semibold px-4",
-                style: {
-                  background: "#00D4B8",
-                  color: "#070B0A",
-                  border: "none"
-                },
-                "data-ocid": "nav.connect_wallet.button",
-                children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(Wallet, { size: 13, className: "mr-1.5" }),
-                  "Connect Wallet"
-                ]
-              }
-            ) })
+            ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx(
             "div",
@@ -41005,9 +40919,7 @@ function Navbar({ activeTab, onTabChange }) {
               className: "flex md:hidden border-t items-center px-2 py-1",
               style: {
                 borderColor: "rgba(0,212,184,0.08)",
-                overflowX: "auto",
-                WebkitOverflowScrolling: "touch",
-                scrollbarWidth: "none"
+                overflowX: "auto"
               },
               children: NAV_ITEMS.map((item) => {
                 const Icon2 = item.icon;
@@ -41038,169 +40950,6 @@ function Navbar({ activeTab, onTabChange }) {
       {
         open: walletModalOpen,
         onClose: () => setWalletModalOpen(false)
-      }
-    )
-  ] });
-}
-const PARTICLES = Array.from({ length: 8 }, (_2, i) => i);
-function SplashOverlay() {
-  const [visible, setVisible] = reactExports.useState(() => {
-    try {
-      return !localStorage.getItem("dcss_splash_shown");
-    } catch {
-      return false;
-    }
-  });
-  const [phase, setPhase] = reactExports.useState("in");
-  const prefersReduced = reactExports.useRef(
-    typeof window !== "undefined" ? window.matchMedia("(prefers-reduced-motion: reduce)").matches : false
-  );
-  reactExports.useEffect(() => {
-    if (!visible) return;
-    if (prefersReduced.current) {
-      const t = setTimeout(() => {
-        setVisible(false);
-        try {
-          localStorage.setItem("dcss_splash_shown", "1");
-        } catch {
-        }
-      }, 1500);
-      return () => clearTimeout(t);
-    }
-    const t1 = setTimeout(() => setPhase("hold"), 800);
-    const t2 = setTimeout(() => setPhase("out"), 1800);
-    const t3 = setTimeout(() => {
-      setVisible(false);
-      try {
-        localStorage.setItem("dcss_splash_shown", "1");
-      } catch {
-      }
-    }, 2400);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
-  }, [visible]);
-  if (!visible) return null;
-  const opacityStyle = prefersReduced.current ? 1 : phase === "in" ? 0 : phase === "hold" ? 1 : 0;
-  const scaleStyle = prefersReduced.current ? 1 : phase === "in" ? 0.88 : 1;
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("style", { children: `
-        @keyframes splash-particle {
-          0% { transform: translateY(0) scale(1); opacity: 0.7; }
-          50% { opacity: 1; }
-          100% { transform: translateY(-60px) scale(0.3); opacity: 0; }
-        }
-        @keyframes splash-glow-pulse {
-          0%, 100% { text-shadow: 0 0 20px rgba(0,212,184,0.6), 0 0 40px rgba(0,212,184,0.3); }
-          50% { text-shadow: 0 0 30px rgba(0,212,184,0.9), 0 0 60px rgba(0,212,184,0.5); }
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .splash-logo { animation: none !important; }
-          .splash-particle { animation: none !important; }
-          .splash-title { animation: none !important; }
-        }
-      ` }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs(
-      "dialog",
-      {
-        "aria-modal": "true",
-        "aria-label": "DCSS loading screen",
-        "aria-live": "polite",
-        open: true,
-        style: {
-          position: "fixed",
-          inset: 0,
-          zIndex: 9999,
-          background: "#070B0A",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          opacity: prefersReduced.current ? 1 : phase === "out" ? 0 : 1,
-          transition: prefersReduced.current ? "none" : phase === "out" ? "opacity 0.6s ease-in-out" : phase === "hold" ? "none" : "opacity 0.8s ease-in-out"
-        },
-        children: [
-          PARTICLES.map((i) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-            "div",
-            {
-              className: "splash-particle",
-              style: {
-                position: "absolute",
-                width: i % 3 === 0 ? "6px" : "4px",
-                height: i % 3 === 0 ? "6px" : "4px",
-                borderRadius: "50%",
-                background: "#00D4B8",
-                left: `${10 + i * 11}%`,
-                bottom: `${15 + i % 4 * 12}%`,
-                animation: `splash-particle ${1.5 + i * 0.3}s ease-in-out ${i * 0.2}s infinite`,
-                boxShadow: "0 0 8px rgba(0,212,184,0.8)"
-              }
-            },
-            i
-          )),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs(
-            "div",
-            {
-              className: "splash-logo",
-              style: {
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                gap: "20px",
-                opacity: opacityStyle,
-                transform: `scale(${scaleStyle})`,
-                transition: prefersReduced.current ? "none" : "opacity 0.8s ease-out, transform 0.8s ease-out"
-              },
-              children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx(
-                  "img",
-                  {
-                    src: "/assets/generated/dcss-logo-transparent.dim_200x200.png",
-                    alt: "DCSS Logo",
-                    style: {
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "50%",
-                      boxShadow: "0 0 40px rgba(0,212,184,0.4), 0 0 80px rgba(0,212,184,0.15)"
-                    }
-                  }
-                ),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { style: { textAlign: "center" }, children: [
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "div",
-                    {
-                      className: "splash-title",
-                      style: {
-                        fontSize: "28px",
-                        fontWeight: "800",
-                        letterSpacing: "0.25em",
-                        color: "#00D4B8",
-                        fontFamily: "Plus Jakarta Sans, sans-serif",
-                        animation: "splash-glow-pulse 2s ease-in-out infinite"
-                      },
-                      children: "DCSS CRYPTO HUB"
-                    }
-                  ),
-                  /* @__PURE__ */ jsxRuntimeExports.jsx(
-                    "div",
-                    {
-                      style: {
-                        fontSize: "12px",
-                        color: "#A9B3AF",
-                        letterSpacing: "0.15em",
-                        marginTop: "8px",
-                        fontFamily: "JetBrains Mono, monospace"
-                      },
-                      children: "Powered by Internet Computer"
-                    }
-                  )
-                ] })
-              ]
-            }
-          )
-        ]
       }
     )
   ] });
@@ -42074,6 +41823,31 @@ function handleComingSoon(action) {
     duration: 2500
   });
 }
+function TokenLogo({
+  token,
+  textColor
+}) {
+  const [imgError, setImgError] = reactExports.useState(false);
+  if (token.logoUrl && !imgError) {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "img",
+      {
+        src: token.logoUrl,
+        alt: token.symbol,
+        className: "w-9 h-9 rounded-full object-cover shrink-0 shadow-md",
+        onError: () => setImgError(true)
+      }
+    );
+  }
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(
+    "div",
+    {
+      className: "w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 shadow-md",
+      style: { background: token.color, color: textColor },
+      children: token.symbol.slice(0, 3)
+    }
+  );
+}
 function TokenCard({
   token,
   index: index2,
@@ -42226,14 +42000,7 @@ function TokenCard({
         ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start justify-between gap-2", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center gap-2.5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(
-              "div",
-              {
-                className: "w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 shadow-md",
-                style: { background: token.color, color: textColor },
-                children: token.symbol.slice(0, 3)
-              }
-            ),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(TokenLogo, { token, textColor }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(
                 "button",
@@ -52215,6 +51982,7 @@ function AppContent() {
     null
   );
   const [walletModalOpen, setWalletModalOpen] = reactExports.useState(false);
+  const [theme, setTheme] = reactExports.useState("claro");
   function handleNavigateToToken(symbol) {
     setTokenDetailSymbol(symbol);
   }
@@ -52228,15 +51996,49 @@ function AppContent() {
     setActiveTab(tab);
     setTokenDetailSymbol(null);
   }
+  function handleThemeToggle() {
+    setTheme((t) => t === "claro" ? "midnight" : "claro");
+  }
   const isDCSSPage = tokenDetailSymbol === "DCSS";
+  const bgStyle = theme === "claro" ? {
+    backgroundImage: "url('/assets/uploads/claro_full-019d2e07-845d-77ea-a30e-3578063f9192-1.png')",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center top"
+  } : {
+    backgroundImage: "url('/assets/uploads/fondos_cielo-019d2e0d-11ac-7427-a835-25a16d69ba7d-2.png')",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundPosition: "center top"
+  };
   return /* @__PURE__ */ jsxRuntimeExports.jsxs(
     "div",
     {
       className: "min-h-screen flex flex-col",
-      style: { background: "var(--bg-base)", position: "relative" },
+      style: { position: "relative" },
       children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SplashOverlay, {}),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(CircuitBackground, {}),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "div",
+          {
+            style: {
+              position: "fixed",
+              inset: 0,
+              zIndex: 0,
+              ...bgStyle
+            }
+          }
+        ),
+        theme === "midnight" && /* @__PURE__ */ jsxRuntimeExports.jsx(
+          "div",
+          {
+            style: {
+              position: "fixed",
+              inset: 0,
+              zIndex: 0,
+              background: "rgba(5,10,20,0.72)"
+            }
+          }
+        ),
         /* @__PURE__ */ jsxRuntimeExports.jsxs(
           "div",
           {
@@ -52248,7 +52050,15 @@ function AppContent() {
               minHeight: "100vh"
             },
             children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx(Navbar, { activeTab, onTabChange: handleTabChange }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx(
+                Navbar,
+                {
+                  activeTab,
+                  onTabChange: handleTabChange,
+                  theme,
+                  onThemeToggle: handleThemeToggle
+                }
+              ),
               /* @__PURE__ */ jsxRuntimeExports.jsx(AnnouncementBanner, {}),
               /* @__PURE__ */ jsxRuntimeExports.jsx("main", { className: "flex-1", children: isDCSSPage ? /* @__PURE__ */ jsxRuntimeExports.jsx(DCSSCoinPage, { onBack: handleBackFromToken }) : tokenDetailSymbol ? /* @__PURE__ */ jsxRuntimeExports.jsx(
                 TokenDetailPage,
