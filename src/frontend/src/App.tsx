@@ -3,11 +3,9 @@ import { useState } from "react";
 import ActivityFeed from "./components/ActivityFeed";
 import AnnouncementBanner from "./components/AnnouncementBanner";
 import BridgePanel from "./components/BridgePanel";
-import CircuitBackground from "./components/CircuitBackground";
 import DCSSHero from "./components/DCSSHero";
 import Footer from "./components/Footer";
 import Navbar, { type Tab } from "./components/Navbar";
-import SplashOverlay from "./components/SplashOverlay";
 import TokenGrid from "./components/TokenGrid";
 import WalletConnectModal from "./components/WalletConnectModal";
 import { TokenProvider } from "./contexts/TokenContext";
@@ -21,6 +19,8 @@ import ProjectPage from "./pages/ProjectPage";
 import StakingPage from "./pages/StakingPage";
 import TokenDetailPage from "./pages/TokenDetailPage";
 import WalletPage from "./pages/WalletPage";
+
+export type AppTheme = "claro" | "midnight";
 
 function PortfolioBar() {
   const { activeWallet, getBalance, balanceTick } = useWallet();
@@ -174,6 +174,7 @@ function AppContent() {
     null,
   );
   const [walletModalOpen, setWalletModalOpen] = useState(false);
+  const [theme, setTheme] = useState<AppTheme>("claro");
 
   function handleNavigateToToken(symbol: string) {
     setTokenDetailSymbol(symbol);
@@ -192,16 +193,55 @@ function AppContent() {
     setTokenDetailSymbol(null);
   }
 
-  // Show DCSS coin page when token is DCSS
+  function handleThemeToggle() {
+    setTheme((t) => (t === "claro" ? "midnight" : "claro"));
+  }
+
   const isDCSSPage = tokenDetailSymbol === "DCSS";
+
+  // Background styles per theme
+  const bgStyle =
+    theme === "claro"
+      ? {
+          backgroundImage:
+            "url('/assets/uploads/claro_full-019d2e07-845d-77ea-a30e-3578063f9192-1.png')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center top",
+        }
+      : {
+          backgroundImage:
+            "url('/assets/uploads/fondos_cielo-019d2e0d-11ac-7427-a835-25a16d69ba7d-2.png')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center top",
+        };
 
   return (
     <div
       className="min-h-screen flex flex-col"
-      style={{ background: "var(--bg-base)", position: "relative" }}
+      style={{ position: "relative" }}
     >
-      <SplashOverlay />
-      <CircuitBackground />
+      {/* Background layer */}
+      <div
+        style={{
+          position: "fixed",
+          inset: 0,
+          zIndex: 0,
+          ...bgStyle,
+        }}
+      />
+      {/* Dark overlay for midnight */}
+      {theme === "midnight" && (
+        <div
+          style={{
+            position: "fixed",
+            inset: 0,
+            zIndex: 0,
+            background: "rgba(5,10,20,0.72)",
+          }}
+        />
+      )}
 
       <div
         style={{
@@ -212,7 +252,12 @@ function AppContent() {
           minHeight: "100vh",
         }}
       >
-        <Navbar activeTab={activeTab} onTabChange={handleTabChange} />
+        <Navbar
+          activeTab={activeTab}
+          onTabChange={handleTabChange}
+          theme={theme}
+          onThemeToggle={handleThemeToggle}
+        />
         <AnnouncementBanner />
 
         <main className="flex-1">

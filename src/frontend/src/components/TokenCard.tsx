@@ -24,6 +24,31 @@ function handleComingSoon(action: string) {
   });
 }
 
+function TokenLogo({
+  token,
+  textColor,
+}: { token: TokenWithMeta; textColor: string }) {
+  const [imgError, setImgError] = useState(false);
+  if (token.logoUrl && !imgError) {
+    return (
+      <img
+        src={token.logoUrl}
+        alt={token.symbol}
+        className="w-9 h-9 rounded-full object-cover shrink-0 shadow-md"
+        onError={() => setImgError(true)}
+      />
+    );
+  }
+  return (
+    <div
+      className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 shadow-md"
+      style={{ background: token.color, color: textColor }}
+    >
+      {token.symbol.slice(0, 3)}
+    </div>
+  );
+}
+
 export default function TokenCard({
   token,
   index,
@@ -93,7 +118,7 @@ export default function TokenCard({
         </span>
       </div>
 
-      {/* Price alert bell — top-left corner, visible on hover */}
+      {/* Price alert bell */}
       {hovered && (
         <div
           style={{
@@ -176,12 +201,7 @@ export default function TokenCard({
 
       <div className="flex items-start justify-between gap-2">
         <div className="flex items-center gap-2.5">
-          <div
-            className="w-9 h-9 rounded-full flex items-center justify-center text-xs font-bold shrink-0 shadow-md"
-            style={{ background: token.color, color: textColor }}
-          >
-            {token.symbol.slice(0, 3)}
-          </div>
+          <TokenLogo token={token} textColor={textColor} />
           <div>
             <button
               type="button"

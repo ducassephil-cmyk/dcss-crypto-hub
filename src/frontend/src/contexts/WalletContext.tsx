@@ -45,39 +45,6 @@ export function detectBrowser(): BrowserType {
   return "other";
 }
 
-export function getOisyInstallUrl(): {
-  url: string;
-  browser: BrowserType;
-  note?: string;
-} {
-  const browser = detectBrowser();
-  const chromeUrl =
-    "https://chromewebstore.google.com/detail/oisy-wallet/pockendbbajckdfkpbejbjgeobgblbfb";
-
-  switch (browser) {
-    case "edge":
-      return {
-        url: chromeUrl,
-        browser,
-        note: "En Edge: abre Chrome Web Store → habilita 'Permitir extensiones de otras tiendas' → Instalar",
-      };
-    case "firefox":
-      return {
-        url: "https://oisy.com",
-        browser,
-        note: "Oisy no tiene extensión para Firefox aún. Usa la versión web en oisy.com",
-      };
-    case "safari":
-      return {
-        url: "https://oisy.com",
-        browser,
-        note: "Oisy no tiene extensión para Safari. Usa la versión web en oisy.com",
-      };
-    default:
-      return { url: chromeUrl, browser };
-  }
-}
-
 // ── Keplr types ──
 interface KeplrKey {
   bech32Address: string;
@@ -98,33 +65,17 @@ const iiAdapter: WalletAdapter = {
   installUrl: "https://identity.ic0.app",
 };
 
-// Oisy adapter
+// Oisy adapter — opens oisy.com directly
 const oisyAdapter: WalletAdapter = {
   id: "Oisy",
   label: "Oisy",
   network: "ICP",
-  isAvailable: () =>
-    typeof window !== "undefined" &&
-    !!(window as unknown as Record<string, unknown>).oisy,
+  isAvailable: () => false, // always show as external link
   connect: async () => {
-    try {
-      const oisy = (window as unknown as Record<string, unknown>).oisy as
-        | { connect: () => Promise<{ address: string }> | { address: string } }
-        | undefined;
-      if (!oisy) return { address: "", isReal: false };
-      const result = await oisy.connect();
-      const address =
-        typeof result === "object" && "address" in result
-          ? (result as { address: string }).address
-          : "";
-      if (!address) return { address: "", isReal: false };
-      return { address, isReal: true };
-    } catch {
-      return { address: "", isReal: false };
-    }
+    window.open("https://oisy.com", "_blank");
+    return { address: "", isReal: false };
   },
-  installUrl:
-    "https://chromewebstore.google.com/detail/oisy-wallet/pockendbbajckdfkpbejbjgeobgblbfb",
+  installUrl: "https://oisy.com",
 };
 
 // Keplr adapter — Cosmos ecosystem wallet (Chrome + Edge)
@@ -164,8 +115,8 @@ const keplrAdapter: WalletAdapter = {
 };
 
 export const SUPPORTED_WALLETS: WalletAdapter[] = [
-  iiAdapter,
   oisyAdapter,
+  iiAdapter,
   keplrAdapter,
 ];
 
@@ -240,6 +191,35 @@ async function fetchKeplrATOMBalance(
   }
 }
 
+// ── ICP balance fetch via Rosetta API ──
+async function fetchICPBalanceRosetta(principal: string): Promise<number> {
+  try {
+    const res = await fetch(
+      "https://rosetta-api.internetcomputer.org/account/balance",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          network_identifier: {
+            blockchain: "Internet Computer",
+            network: "00000000000000020101",
+          },
+          account_identifier: { address: principal },
+        }),
+      },
+    );
+    if (!res.ok) return 0;
+    const data = (await res.json()) as {
+      balances?: { value: string }[];
+    };
+    const raw = data.balances?.[0]?.value;
+    if (!raw) return 0;
+    return Number(raw) / 1e8;
+  } catch {
+    return 0;
+  }
+}
+
 export function WalletProvider({ children }: { children: ReactNode }) {
   const [connectedWallets, setConnectedWallets] = useState<ConnectedWallet[]>(
     [],
@@ -268,8 +248,11 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       amount: number,
     ): void => {
       const key = `dcss_${network}_${address}_${symbol}`;
-      if (amount <= 0) localStorage.removeItem(key);
-      else localStorage.setItem(key, amount.toString());
+      if (amount <= 0) {
+        localStorage.removeItem(key);
+      } else {
+        localStorage.setItem(key, String(amount));
+      }
       bumpTick();
     },
     [bumpTick],
@@ -277,110 +260,117 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 
   const connectWallet = useCallback(
     async (
-      network: Network,
+      _network: Network,
       walletType: string,
     ): Promise<
       ConnectedWallet & { redirected?: boolean; installNote?: string }
     > => {
       const adapter = SUPPORTED_WALLETS.find((w) => w.id === walletType);
-
       if (!adapter) {
-        return { network, walletType, address: "", isReal: false };
+        return {
+          network: _network,
+          walletType,
+          address: "",
+          isReal: false,
+          redirected: false,
+        };
       }
 
-      // Oisy: if not installed, redirect to install page
-      if (walletType === "Oisy" && !adapter.isAvailable()) {
-        const { url, note } = getOisyInstallUrl();
-        window.open(url, "_blank", "noopener,noreferrer");
+      // Oisy: open oisy.com and return immediately
+      if (adapter.id === "Oisy") {
+        await adapter.connect();
         return {
-          network,
+          network: adapter.network ?? _network,
           walletType,
           address: "",
           isReal: false,
           redirected: true,
-          installNote: note,
+          installNote: "Abriendo Oisy Wallet en una nueva pestaña...",
         };
       }
 
-      // Keplr: if not installed, open Edge Add-ons store
-      if (walletType === "Keplr" && !adapter.isAvailable()) {
-        const browser = detectBrowser();
-        const url =
-          browser === "edge"
-            ? "https://microsoftedge.microsoft.com/addons/detail/keplr/dmkamcknogkgcdfhhbddcghachkejeap"
-            : "https://www.keplr.app/download";
-        window.open(url, "_blank", "noopener,noreferrer");
+      // Not available — redirect to install
+      if (!adapter.isAvailable()) {
+        window.open(adapter.installUrl, "_blank");
         return {
-          network,
+          network: adapter.network ?? _network,
           walletType,
           address: "",
           isReal: false,
           redirected: true,
-          installNote:
-            browser === "edge"
-              ? "Instala Keplr desde Microsoft Edge Add-ons, luego vuelve aquí y conecta."
-              : "Instala la extensión de Keplr y vuelve a conectar.",
+          installNote: `Instala ${walletType} y vuelve a conectar`,
         };
       }
 
+      // Attempt real connection
       const result = await adapter.connect();
-
       if (!result.address || !result.isReal) {
-        return { network, walletType, address: "", isReal: false };
+        return {
+          network: adapter.network ?? _network,
+          walletType,
+          address: result.address,
+          isReal: false,
+        };
       }
-
-      // Determine the network from the adapter definition
-      const walletNetwork: Network = adapter.network ?? network;
 
       const wallet: ConnectedWallet = {
-        network: walletNetwork,
+        network: adapter.network ?? _network,
         walletType,
         address: result.address,
-        isReal: true,
+        isReal: result.isReal,
       };
 
       setConnectedWallets((prev) => {
-        const filtered = prev.filter((w) => w.walletType !== walletType);
-        return [...filtered, wallet];
+        const exists = prev.find(
+          (w) => w.address === wallet.address && w.walletType === walletType,
+        );
+        return exists ? prev : [...prev, wallet];
       });
       setActiveWallet(wallet);
-      bumpTick();
 
-      // Fetch Keplr ATOM balance in background
-      if (walletType === "Keplr") {
-        fetchKeplrATOMBalance(result.address, (amount) => {
-          localStorage.setItem(
-            `dcss_Cosmos_${result.address}_ATOM`,
-            amount.toString(),
-          );
-          setBalanceTick((t) => t + 1);
+      // Fetch balances after connecting
+      if (walletType === "Internet Identity" || walletType === "Oisy") {
+        // ICP balance fetch
+        fetchICPBalanceRosetta(result.address).then((bal) => {
+          if (bal > 0) {
+            setBalance(wallet.network, wallet.address, "ICP", bal);
+          }
+        });
+      } else if (walletType === "Keplr") {
+        fetchKeplrATOMBalance(result.address, (atom) => {
+          setBalance(wallet.network, wallet.address, "ATOM", atom);
         });
       }
 
       return wallet;
     },
-    [bumpTick],
+    [setBalance],
   );
 
-  const disconnectWallet = useCallback(
-    (address: string): void => {
-      setConnectedWallets((prev) => {
-        const wallet = prev.find((w) => w.address === address);
-        if (wallet) {
-          const keysToRemove: string[] = [];
-          for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key?.startsWith(`dcss_${wallet.network}_${address}_`))
-              keysToRemove.push(key);
-          }
-          for (const k of keysToRemove) localStorage.removeItem(k);
-        }
-        return prev.filter((w) => w.address !== address);
-      });
-      setActiveWallet((prev) => (prev?.address === address ? null : prev));
-      bumpTick();
-    },
-    [bumpTick],
+  const disconnectWallet = useCallback((address: string) => {
+    setConnectedWallets((prev) => prev.filter((w) => w.address !== address));
+    setActiveWallet((prev) => (prev?.address === address ? null : prev));
+  }, []);
+
+  const isEVMAvailable = useCallback(
+    () =>
+      typeof window !== "undefined" &&
+      !!(window as unknown as Record<string, unknown>).ethereum,
+    [],
+  );
+
+  const isSolanaAvailable = useCallback(
+    () =>
+      typeof window !== "undefined" &&
+      !!(window as unknown as Record<string, unknown>).solana,
+    [],
+  );
+
+  const isKeplrAvailable = useCallback(
+    () =>
+      typeof window !== "undefined" &&
+      !!(window as unknown as Record<string, unknown>).keplr,
+    [],
   );
 
   const value = useMemo(
@@ -393,11 +383,9 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       getBalance,
       setBalance,
       balanceTick,
-      isEVMAvailable: () => false,
-      isSolanaAvailable: () => false,
-      isKeplrAvailable: () =>
-        typeof window !== "undefined" &&
-        !!(window as unknown as Record<string, unknown>).keplr,
+      isEVMAvailable,
+      isSolanaAvailable,
+      isKeplrAvailable,
     }),
     [
       connectedWallets,
@@ -407,6 +395,9 @@ export function WalletProvider({ children }: { children: ReactNode }) {
       getBalance,
       setBalance,
       balanceTick,
+      isEVMAvailable,
+      isSolanaAvailable,
+      isKeplrAvailable,
     ],
   );
 
@@ -415,6 +406,6 @@ export function WalletProvider({ children }: { children: ReactNode }) {
 
 export function useWallet(): WalletContextType {
   const ctx = useContext(WalletCtx);
-  if (!ctx) throw new Error("useWallet must be used within WalletProvider");
+  if (!ctx) throw new Error("useWallet must be used inside WalletProvider");
   return ctx;
 }

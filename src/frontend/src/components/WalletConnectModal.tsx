@@ -4,7 +4,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Loader2 } from "lucide-react";
+import { ExternalLink, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import {
@@ -27,7 +27,7 @@ const WALLET_ICONS: Record<string, string> = {
 
 const WALLET_DESC: Record<string, string> = {
   "Internet Identity": "Login con Internet Computer — sin seed phrase",
-  Oisy: "Wallet multi-chain nativa de ICP",
+  Oisy: "Wallet multi-chain nativa de ICP — Abre oisy.com",
   Keplr: "Wallet del ecosistema Cosmos — ATOM, OSMO y más",
 };
 
@@ -36,69 +36,6 @@ const WALLET_NETWORK_BADGE: Record<string, string> = {
   Oisy: "ICP",
   Keplr: "Cosmos",
 };
-
-function OisyInstallInstructions() {
-  const browser = detectBrowser();
-  if (browser === "edge") {
-    return (
-      <div
-        className="text-[11px] p-3 rounded-lg mt-1"
-        style={{
-          background: "rgba(0,212,184,0.06)",
-          border: "1px solid rgba(0,212,184,0.2)",
-          color: "var(--text-muted)",
-        }}
-      >
-        <p
-          className="font-semibold mb-1"
-          style={{ color: "var(--accent-color)" }}
-        >
-          Instalación en Edge
-        </p>
-        <ol className="list-decimal ml-3 space-y-0.5">
-          <li>Ve a Chrome Web Store (se abrirá automáticamente)</li>
-          <li>
-            En Edge, activa{" "}
-            <span style={{ color: "var(--text-primary)" }}>
-              &ldquo;Permitir extensiones de otras tiendas&rdquo;
-            </span>{" "}
-            en la barra inferior
-          </li>
-          <li>
-            Haz clic en &ldquo;Agregar a Chrome&rdquo; — funciona en Edge
-            también
-          </li>
-          <li>Regresa aquí y conecta</li>
-        </ol>
-      </div>
-    );
-  }
-  if (browser === "firefox" || browser === "safari") {
-    return (
-      <div
-        className="text-[11px] p-3 rounded-lg mt-1"
-        style={{
-          background: "rgba(255,100,100,0.06)",
-          border: "1px solid rgba(255,100,100,0.2)",
-          color: "var(--text-muted)",
-        }}
-      >
-        Oisy no tiene extensión para{" "}
-        {browser === "firefox" ? "Firefox" : "Safari"} aún. Usa la versión web
-        en{" "}
-        <a
-          href="https://oisy.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: "var(--accent-color)" }}
-        >
-          oisy.com
-        </a>
-      </div>
-    );
-  }
-  return null;
-}
 
 function KeplrInstallInstructions() {
   const browser = detectBrowser();
@@ -154,8 +91,21 @@ export default function WalletConnectModal({
   const { connectWallet, connectedWallets } = useWallet();
   const [connecting, setConnecting] = useState<string | null>(null);
   const [showKeplrInstall, setShowKeplrInstall] = useState(false);
+  const [oisyOpened, setOisyOpened] = useState(false);
 
   async function handleConnect(walletId: string) {
+    // Oisy: just open the site
+    if (walletId === "Oisy") {
+      window.open("https://oisy.com", "_blank");
+      setOisyOpened(true);
+      toast.info("Abriendo Oisy Wallet...", {
+        description:
+          "Conéctate en oisy.com y vuelve cuando tengas tu wallet lista",
+        duration: 6000,
+      });
+      return;
+    }
+
     setConnecting(walletId);
     const wallet = await connectWallet("ICP", walletId);
     setConnecting(null);
@@ -198,25 +148,24 @@ export default function WalletConnectModal({
           background: "var(--bg-surface)",
           border: "1px solid var(--border-subtle)",
         }}
-        data-ocid="wallet.dialog"
+        data-ocid="wallet.modal"
       >
         <DialogHeader>
-          <DialogTitle style={{ color: "var(--text-primary)" }}>
+          <DialogTitle
+            className="text-base font-bold"
+            style={{ color: "var(--text-primary)" }}
+          >
             Conectar Wallet
           </DialogTitle>
-          <p className="text-xs mt-1" style={{ color: "var(--text-muted)" }}>
-            Selecciona tu wallet para ver balances y operar en tu red.
-          </p>
         </DialogHeader>
 
-        <div className="space-y-3 mt-2">
+        <div className="flex flex-col gap-2 mt-1">
           {SUPPORTED_WALLETS.map((adapter) => {
             const isConnected = activeAddrs.has(adapter.id);
             const isConnecting = connecting === adapter.id;
             const isOisy = adapter.id === "Oisy";
             const isKeplr = adapter.id === "Keplr";
             const notInstalled = !adapter.isAvailable();
-            const oisyNotInstalled = isOisy && notInstalled;
             const keplrNotInstalled = isKeplr && notInstalled;
 
             return (
@@ -234,7 +183,9 @@ export default function WalletConnectModal({
                       ? "1px solid rgba(0,212,184,0.4)"
                       : isKeplr
                         ? "1px solid rgba(118,90,226,0.25)"
-                        : "1px solid var(--border-subtle)",
+                        : isOisy
+                          ? "1px solid rgba(0,212,184,0.35)"
+                          : "1px solid var(--border-subtle)",
                     opacity: connecting && !isConnecting ? 0.5 : 1,
                     cursor: connecting ? "not-allowed" : "pointer",
                   }}
@@ -246,10 +197,14 @@ export default function WalletConnectModal({
                     style={{
                       background: isKeplr
                         ? "rgba(118,90,226,0.12)"
-                        : "var(--bg-base)",
+                        : isOisy
+                          ? "rgba(0,212,184,0.08)"
+                          : "var(--bg-base)",
                       border: isKeplr
                         ? "1px solid rgba(118,90,226,0.35)"
-                        : "1px solid var(--border-subtle)",
+                        : isOisy
+                          ? "1px solid rgba(0,212,184,0.3)"
+                          : "1px solid var(--border-subtle)",
                       color: isKeplr ? "#765AE2" : "var(--accent-color)",
                     }}
                   >
@@ -282,6 +237,19 @@ export default function WalletConnectModal({
                         </span>
                       )}
 
+                      {isOisy && (
+                        <span
+                          className="text-[9px] px-1.5 py-0.5 rounded-full font-semibold tracking-wide flex items-center gap-1"
+                          style={{
+                            background: "rgba(0,212,184,0.08)",
+                            color: "var(--accent-color)",
+                          }}
+                        >
+                          <ExternalLink size={8} />
+                          oisy.com
+                        </span>
+                      )}
+
                       {isConnected && (
                         <span
                           className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
@@ -307,38 +275,20 @@ export default function WalletConnectModal({
                             : "No instalado"}
                         </span>
                       )}
-
-                      {oisyNotInstalled && (
-                        <span
-                          className="text-[10px] px-1.5 py-0.5 rounded-full font-semibold"
-                          style={{
-                            background: "rgba(255,180,0,0.12)",
-                            color: "#ffb400",
-                          }}
-                        >
-                          {browser === "edge"
-                            ? "Instalar en Edge"
-                            : browser === "firefox"
-                              ? "Sin extensión"
-                              : browser === "safari"
-                                ? "Sin extensión"
-                                : "No instalado"}
-                        </span>
-                      )}
                     </div>
                     <p
                       className="text-xs mt-0.5 truncate"
                       style={{ color: "var(--text-muted)" }}
                     >
-                      {keplrNotInstalled && browser === "edge"
-                        ? "Click para abrir Edge Add-ons e instalar Keplr"
-                        : oisyNotInstalled && browser === "edge"
-                          ? "Click para abrir Chrome Web Store (compatible con Edge)"
+                      {isOisy && oisyOpened
+                        ? "Abriendo Oisy Wallet..."
+                        : keplrNotInstalled && browser === "edge"
+                          ? "Click para abrir Edge Add-ons e instalar Keplr"
                           : WALLET_DESC[adapter.id]}
                     </p>
                   </div>
 
-                  {/* Spinner */}
+                  {/* Spinner or external icon */}
                   {isConnecting && (
                     <Loader2
                       size={16}
@@ -348,9 +298,15 @@ export default function WalletConnectModal({
                       }}
                     />
                   )}
+                  {isOisy && !isConnecting && (
+                    <ExternalLink
+                      size={14}
+                      className="shrink-0"
+                      style={{ color: "var(--text-muted)" }}
+                    />
+                  )}
                 </button>
 
-                {isOisy && oisyNotInstalled && <OisyInstallInstructions />}
                 {isKeplr && (keplrNotInstalled || showKeplrInstall) && (
                   <KeplrInstallInstructions />
                 )}

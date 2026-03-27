@@ -27,6 +27,7 @@ export interface TokenMeta {
   description: string;
   officialUrl: string;
   explorerUrl?: string;
+  logoUrl?: string;
   layer?: string;
   depin?: boolean;
   ath?: number;
@@ -74,6 +75,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Blockchain que permite aplicaciones web completas 100% on-chain sin servidores centralizados. Velocidad submilisegundo.",
     officialUrl: "https://internetcomputer.org",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/14495/small/Internet_Computer_logo.png",
     explorerUrl: "https://dashboard.internetcomputer.org",
   },
   {
@@ -96,6 +99,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "La primera criptomoneda creada por Satoshi Nakamoto en 2009. El oro digital del siglo XXI, suministro máximo 21 millones.",
     officialUrl: "https://bitcoin.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/1/small/bitcoin.png",
     explorerUrl: "https://mempool.space",
   },
   // Polkadot
@@ -108,6 +112,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Red de parachains soberanas con seguridad compartida. Creada por co-fundador de Ethereum Gavin Wood.",
     officialUrl: "https://polkadot.network",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/12171/small/polkadot.png",
     explorerUrl: "https://polkadot.subscan.io",
   },
   {
@@ -131,6 +137,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "El centro de la internet de blockchains. El protocolo IBC permite que blockchains soberanas se comuniquen entre sí.",
     officialUrl: "https://cosmos.network",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/1481/small/cosmos_hub.png",
     explorerUrl: "https://mintscan.io",
   },
   {
@@ -142,6 +150,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Plataforma de IA descentralizada en Cosmos. Agentes autónomos de IA operan servicios económicos sin intervención humana.",
     officialUrl: "https://fetch.ai",
+    logoUrl: "https://assets.coingecko.com/coins/images/5681/small/Fetch.jpg",
     depin: true,
   },
   {
@@ -153,6 +162,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Mercado descentralizado de computación en la nube. Alternativa descentralizada a AWS sin intermediarios.",
     officialUrl: "https://akash.network",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/12785/small/akash-logo.png",
     depin: true,
   },
   {
@@ -175,6 +186,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Blockchain para DeFi avanzado: derivados, futuros y opciones on-chain sin gas fees de trading.",
     officialUrl: "https://injective.com",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/12882/small/Secondary_Symbol.png",
   },
   // Celestia
   {
@@ -186,6 +199,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Primera red modular de disponibilidad de datos. Separa consenso de ejecución para blockchains más baratas y escalables.",
     officialUrl: "https://celestia.org",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/31967/small/celestia.png",
   },
   // 0G
   {
@@ -209,6 +224,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "La blockchain que inventó los smart contracts y el DeFi moderno. Mayor ecosistema de desarrolladores del mundo.",
     officialUrl: "https://ethereum.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/279/small/ethereum.png",
     explorerUrl: "https://etherscan.io",
   },
   {
@@ -220,6 +236,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Infraestructura de oráculos que conecta smart contracts con datos del mundo real. Sin Chainlink, el DeFi no funcionaría.",
     officialUrl: "https://chain.link",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/877/small/chainlink-new-logo.png",
   },
   {
     symbol: "GRT",
@@ -357,6 +375,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "65,000 TPS con fees de fracciones de centavo. Proof of History para ordenar transacciones sin cuellos de botella.",
     officialUrl: "https://solana.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/4128/small/solana.png",
     explorerUrl: "https://explorer.solana.com",
   },
   {
@@ -368,6 +387,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Red descentralizada de renderizado GPU. Artistas acceden a capacidad gráfica distribuida para renders 3D y VFX.",
     officialUrl: "https://rendernetwork.com",
+    logoUrl: "https://assets.coingecko.com/coins/images/11636/small/rndr.png",
     depin: true,
   },
   {
@@ -412,6 +432,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Blockchain con cuentas de nombres legibles y fees casi nulos. Compatible con Ethereum via Aurora. Sharding automático.",
     officialUrl: "https://near.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/10365/small/near.jpg",
   },
   // Avalanche
   {
@@ -423,6 +444,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Alta velocidad con finalidad menor a 2 segundos. Arquitectura de subredes para blockchains personalizadas.",
     officialUrl: "https://avax.network",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/12559/small/Avalanche_Circle_RedWhite_Trans.png",
   },
   // Cardano
   {
@@ -434,6 +457,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "La blockchain académica. Cada feature respaldada por papers peer-reviewed. Fundada por Charles Hoskinson.",
     officialUrl: "https://cardano.org",
+    logoUrl: "https://assets.coingecko.com/coins/images/975/small/cardano.png",
   },
   // Mina
   {
@@ -445,6 +469,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "La blockchain más liviana del mundo (22kb). Usa zk-SNARKs para verificar el estado completo. Privacy by design.",
     officialUrl: "https://minaprotocol.com",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/15628/small/JM4_vQ34_400x400.png",
   },
   // Bittensor
   {
@@ -456,6 +482,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Red descentralizada de inteligencia artificial. Los modelos de ML compiten y se recompensan por su utilidad real.",
     officialUrl: "https://bittensor.com",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/28452/small/ARUsPeNQ_400x400.jpeg",
     depin: true,
   },
   // Arweave
@@ -468,6 +496,8 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Almacenamiento permanente de datos on-chain. Pago único para guardar datos para siempre. La biblioteca permanente de internet.",
     officialUrl: "https://arweave.org",
+    logoUrl:
+      "https://assets.coingecko.com/coins/images/4343/small/oRt6SiEN_400x400.jpg",
     depin: true,
   },
   // Stablecoins
@@ -480,6 +510,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Stablecoin más utilizada del mundo, anclada 1:1 al dólar. El dólar digital del ecosistema crypto.",
     officialUrl: "https://tether.to",
+    logoUrl: "https://assets.coingecko.com/coins/images/325/small/Tether.png",
   },
   {
     symbol: "USDC",
@@ -490,6 +521,7 @@ export const TOKEN_LIST: TokenMeta[] = [
     description:
       "Stablecoin regulada de Circle/Coinbase. Transparencia total de reservas. Compatible con DeFi institucional.",
     officialUrl: "https://circle.com/usdc",
+    logoUrl: "https://assets.coingecko.com/coins/images/6319/small/usdc.png",
   },
 ];
 

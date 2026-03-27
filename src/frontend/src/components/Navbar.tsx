@@ -15,9 +15,12 @@ import {
   Layers,
   LayoutDashboard,
   LogOut,
+  Moon,
+  Sun,
   Wallet,
 } from "lucide-react";
 import { useState } from "react";
+import type { AppTheme } from "../App";
 import { useWallet } from "../contexts/WalletContext";
 import type { Network } from "../data/tokens";
 import { truncateAddr } from "../data/tokens";
@@ -65,9 +68,16 @@ const NETWORK_NATIVE: Record<string, string> = {
 interface NavbarProps {
   activeTab: Tab;
   onTabChange: (tab: Tab) => void;
+  theme: AppTheme;
+  onThemeToggle: () => void;
 }
 
-export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
+export default function Navbar({
+  activeTab,
+  onTabChange,
+  theme,
+  onThemeToggle,
+}: NavbarProps) {
   const {
     connectedWallets,
     activeWallet,
@@ -75,7 +85,6 @@ export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
     disconnectWallet,
     balanceTick,
   } = useWallet();
-  // Consume balanceTick so Navbar re-renders when balances arrive
   void balanceTick;
   const { prices } = useLivePrices();
   const [walletModalOpen, setWalletModalOpen] = useState(false);
@@ -173,8 +182,34 @@ export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
             })}
           </nav>
 
-          {/* Right: wallet */}
+          {/* Right: theme toggle + wallet */}
           <div className="flex items-center gap-2">
+            {/* Theme toggle */}
+            <button
+              type="button"
+              onClick={onThemeToggle}
+              className="flex items-center justify-center rounded-full transition-colors"
+              style={{
+                width: "32px",
+                height: "32px",
+                background:
+                  theme === "midnight"
+                    ? "rgba(120,160,255,0.12)"
+                    : "rgba(255,200,80,0.12)",
+                border:
+                  theme === "midnight"
+                    ? "1px solid rgba(120,160,255,0.3)"
+                    : "1px solid rgba(255,200,80,0.35)",
+                color: theme === "midnight" ? "#8ab4f8" : "#f5c842",
+              }}
+              title={
+                theme === "midnight" ? "Cambiar a Claro" : "Cambiar a Midnight"
+              }
+              data-ocid="nav.theme.toggle"
+            >
+              {theme === "midnight" ? <Sun size={14} /> : <Moon size={14} />}
+            </button>
+
             {activeWallet ? (
               <DropdownMenu>
                 <DropdownMenuTrigger asChild>
@@ -336,8 +371,6 @@ export default function Navbar({ activeTab, onTabChange }: NavbarProps) {
           style={{
             borderColor: "rgba(0,212,184,0.08)",
             overflowX: "auto",
-            WebkitOverflowScrolling: "touch" as never,
-            scrollbarWidth: "none" as never,
           }}
         >
           {NAV_ITEMS.map((item) => {
