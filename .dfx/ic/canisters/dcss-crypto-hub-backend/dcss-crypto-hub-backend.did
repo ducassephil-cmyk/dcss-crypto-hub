@@ -1,0 +1,64 @@
+type http_request_result = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type http_header = 
+ record {
+   name: text;
+   value: text;
+ };
+type TransformationOutput = 
+ record {
+   body: blob;
+   headers: vec http_header;
+   status: nat;
+ };
+type TransformationInput = 
+ record {
+   context: blob;
+   response: http_request_result;
+ };
+type Transaction = 
+ record {
+   amount: float64;
+   fromAddr: text;
+   id: nat;
+   network: text;
+   timestamp: int;
+   toAddr: text;
+   tokenSymbol: text;
+   txType: text;
+   walletAddr: text;
+ };
+type TokenInfo = 
+ record {
+   id: nat;
+   lastUpdate: int;
+   name: text;
+   price: float64;
+   symbol: text;
+ };
+type Stats = 
+ record {
+   circulatingSupply: float64;
+   cyclesConsumed: nat;
+   holders: nat;
+   totalSupply: float64;
+   txCount: nat;
+ };
+service : {
+  closeVault: (id: nat) -> ();
+  fetchExternalUrl: (url: text) -> (text);
+  getBridgeFee: (sourceChain: text, destChain: text, amount: float64) ->
+   (float64, nat) query;
+  getStats: () -> (Stats) query;
+  getTokenPrices: () -> (vec TokenInfo) query;
+  getTransactions: (walletAddr: text) -> (vec Transaction) query;
+  openVault: (collateral: nat) -> (nat);
+  recordTransaction: (txType: text, tokenSymbol: text, amount: float64,
+   fromAddr: text, toAddr: text, network: text, walletAddr: text) -> (
+   nat);
+  transform: (input: TransformationInput) -> (TransformationOutput) query;
+}
