@@ -1,5 +1,5 @@
 // Version: 1.0.0
-type BridgeFee__243947930 =
+type BridgeFee__1012740005 =
   {destChain : Text; fee : Float; sourceChain : Text; timeMinutes : Nat};
 type Data__156715955<K, V> =
   {var count : Nat__875494699; kvs : [var ?(K, V)]};
@@ -10,9 +10,9 @@ type Nat__875494699 = Nat__920180692;
 type Nat__920180692 = Nat;
 type Node__379608568<K, V> =
   {#internal : Internal__840000567<K, V>; #leaf : Leaf__1071331175<K, V>};
-type TokenInfo__46457925 =
+type TokenInfo__60593268 =
   {id : Nat; lastUpdate : Int; name : Text; price : Float; symbol : Text};
-type Transaction__756942070 =
+type Transaction__772036807 =
   {
     amount : Float;
     fromAddr : Text;
@@ -24,12 +24,12 @@ type Transaction__756942070 =
     txType : Text;
     walletAddr : Text
   };
-type Vault__77691841 =
+type Vault__740108191 =
   {collateral : Nat; lastUpdated : Int; mintedDCSS : Nat};
 actor {
   stable bridgeFees :
     {
-      var root : Node__379608568<Text, BridgeFee__243947930>;
+      var root : Node__379608568<Text, BridgeFee__1012740005>;
       var size : Nat__875494699
     };
   stable var circulatingSupply : Float;
@@ -37,19 +37,19 @@ actor {
   stable var holders : Nat;
   stable tokens :
     {
-      var root : Node__379608568<Nat, TokenInfo__46457925>;
+      var root : Node__379608568<Nat, TokenInfo__60593268>;
       var size : Nat__875494699
     };
   stable var totalSupply : Float;
   stable transactions :
     {
       var blockIndex : Nat__875494699;
-      var blocks : [var [var ?Transaction__756942070]];
+      var blocks : [var [var ?Transaction__772036807]];
       var elementIndex : Nat__875494699
     };
   stable vaults :
     {
-      var root : Node__379608568<Principal, Vault__77691841>;
+      var root : Node__379608568<Principal, Vault__740108191>;
       var size : Nat__875494699
     }
 };
