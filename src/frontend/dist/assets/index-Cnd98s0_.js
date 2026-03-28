@@ -36938,7 +36938,7 @@ const index = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePropert
   LocalStorage
 }, Symbol.toStringTag, { value: "Module" }));
 const ONE_HOUR_IN_NANOSECONDS = BigInt(36e11);
-const DEFAULT_IDENTITY_PROVIDER = "http://rdmx6-jaaaa-aaaaa-aaadq-cai.localhost:8081/";
+const DEFAULT_IDENTITY_PROVIDER = "https://identity.internetcomputer.org/";
 const InternetIdentityReactContext = reactExports.createContext(
   void 0
 );
