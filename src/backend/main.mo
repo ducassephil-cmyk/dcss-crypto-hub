@@ -4,7 +4,7 @@ import Int "mo:core/Int";
 import Iter "mo:core/Iter";
 import List "mo:core/List";
 import Map "mo:core/Map";
-
+ import Text "mo:core/Text";
 import Nat "mo:core/Nat";
 import Order "mo:core/Order";
 import OutCall "http-outcalls/outcall";

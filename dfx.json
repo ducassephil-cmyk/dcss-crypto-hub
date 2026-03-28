@@ -2,7 +2,7 @@
   "canisters": {
     "dcss-crypto-hub-backend": {
       "candid": "src/dcss-crypto-hub-backend/main.did",
-      "main": "src/dcss-crypto-hub-backend/main.mo",
+      "main": "src/backend/main.mo",
       "type": "motoko"
     },
     "dcss-crypto-hub-frontend": {
